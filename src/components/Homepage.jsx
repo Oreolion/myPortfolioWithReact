@@ -26,7 +26,7 @@ const Homepage = () => {
           </a>
         </div>
         <div className="image-container">
-          <img src="/src/assets/images/remyr-removebg-preview.png" alt="/" />
+          <img src="../src/assets/images/remyr-removebg-preview.png" alt="/" />
         </div>
       </section>
     </>
