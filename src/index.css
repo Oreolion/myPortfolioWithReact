@@ -120,6 +120,7 @@ a {
 
 .collapsebtn {
 
+    padding-top: 5rem;
     width: 1rem;
     background-color: var(--primary-color);
 }

@@ -5,7 +5,7 @@ const About = () => {
   return (
     <>
       <section className="about-me" id="about">
-        <h1 className="animate__animated animate__fadeInTopRight animate__infinite">
+        <h1 className="animate__animated animate__fadeInTopLeft animate__infinite">
           ABOUT <span>ME</span>
         </h1>
         <div className="inner-about-me">
