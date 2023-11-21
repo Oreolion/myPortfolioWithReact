@@ -79,6 +79,7 @@ a {
 
 .header {
   background-color: #222;
+  overflow: hidden;
   display: flex;
   flex-flow: column;
   text-align: center;
@@ -93,6 +94,10 @@ a {
   left: 0;
   transition-duration: .5s ;
   transition-timing-function: ease-in-out;
+}
+
+header h3 .ra {
+    display: none;
 }
 
 .close-btn {
@@ -120,7 +125,7 @@ a {
 
 .collapsebtn {
 
-    padding-top: 5rem;
+    padding-top: 4rem;
     width: 1rem;
     background-color: var(--primary-color);
 }
@@ -166,6 +171,17 @@ a {
 }
 .header-logo span {
   color: var(--primary-color);
+}
+
+.collapsebtn h3 {
+    margin-left: -2rem;
+    font-size: 3rem;
+    color: var(--secondary-color);
+
+}
+
+.collapsebtn h3 .ra {
+    display: block;
 }
 
 .nav-menu {

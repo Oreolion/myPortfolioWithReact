@@ -45,6 +45,7 @@ const Header = () => {
           <h2>
             <span> REMY </span> OREO
           </h2>
+            <h3 className="ra"> RA</h3> 
         </div>
 
         <nav className="nav-menu">
