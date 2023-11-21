@@ -1,4 +1,6 @@
 import "animate.css";
+import picture from '../assets/images/remyr-removebg-preview.png'
+
 
 const Homepage = () => {
   return (
@@ -26,7 +28,7 @@ const Homepage = () => {
           </a>
         </div>
         <div className="image-container">
-          <img src="../src/assets/images/remyr-removebg-preview.png" alt="/" />
+          <img src={picture} alt="/" />
         </div>
       </section>
     </>

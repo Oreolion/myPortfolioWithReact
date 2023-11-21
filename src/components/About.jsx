@@ -1,4 +1,5 @@
 import "animate.css"
+import picture from '../assets/images/remy1-removebg-preview.png'
 
 const About = () => {
   return (
@@ -9,7 +10,7 @@ const About = () => {
         </h1>
         <div className="inner-about-me">
           <div className="row1">
-            <img src="../src/assets/images/remy1-removebg-preview.png" alt="/" />
+            <img src={picture} alt="/" />
           </div>
           <div className="row2">
             <h2>My Name is remy oreo & i am a front-end developer</h2>
