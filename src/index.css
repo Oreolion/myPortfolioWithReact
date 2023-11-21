@@ -287,13 +287,13 @@ h1 span {
 
 .inner-about-me {
   display: flex;
-  gap: 4rem;
+  gap: 3rem;
   flex-wrap: wrap;
   align-items: center;
 }
 
 .about-me .row1 {
-  flex: 1 1 22rem;
+  flex: 1 1 20rem;
   height: 25rem;
 }
 
@@ -317,6 +317,9 @@ h1 span {
 .row2 p {
   font-size: 1rem;
   margin-bottom: 0.7rem;
+}
+.row2 h2 + p {
+    font-weight: bold;
 }
 
 .row2 p span {
