@@ -1,9 +1,9 @@
 import { useState, useRef } from "react";
-import { FaHamburger } from "react-icons/fa";
 import { IoMdCloseCircle } from "react-icons/io";
 import {  FaXTwitter } from "react-icons/fa6";
 import { BsInstagram } from "react-icons/bs";
 import { FiLinkedin, FiFacebook, FiGithub } from "react-icons/fi";
+import { CgMenuGridO } from "react-icons/cg";
 import "animate.css";
 
 const Header = () => {
@@ -35,7 +35,7 @@ const Header = () => {
   return (
     <>
       {!menu && !isToggle ? (
-        <FaHamburger id="menu-bar" onClick={handleMenuBtn} />
+        <CgMenuGridO id="menu-bar" onClick={handleMenuBtn} />
       ) : (
         <IoMdCloseCircle id="menu-bar" onClick={handleMenuBtn} />
       )}

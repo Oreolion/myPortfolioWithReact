@@ -7,7 +7,7 @@ const Homepage = () => {
     <>
       <section id="home" className="homepage">
         <div className="content">
-          <h5>Hi There...</h5>
+          <h5>Hello World...</h5>
           <h1>
             I AM{" "}
             <span className="animate__animated  animate__slideInRight
