@@ -42,7 +42,7 @@ const Experiences = () => {
           </div>
           <div className="experiencebox">
             <div className="content-box">
-              <h5>2023</h5>
+              <h5>2024</h5>
               <h2>Front-End Development</h2>
               <p>
                 Building personal projects, Freelancing, improving my skills by

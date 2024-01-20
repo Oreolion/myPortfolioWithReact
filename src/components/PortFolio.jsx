@@ -203,7 +203,7 @@ const PortFolio = () => {
           rel="noreferrer"
           href="https://github.com/Oreolion?tab=repositories"
         >
-          You can also check out my github Repositories{" "}
+          &#62;&#62; You can also check out my github Repositories{" "}
           <FiGithub size={40} className="logo" />
         </a>
       </section>

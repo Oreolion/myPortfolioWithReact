@@ -1,5 +1,10 @@
-import "animate.css"
-import picture from '../assets/images/remy1-removebg-preview.png'
+import "animate.css";
+import picture from "../assets/images/remy1-removebg-preview.png";
+import { IoLogoCss3, IoLogoJavascript } from "react-icons/io";
+import { FaHtml5, FaReact } from "react-icons/fa6";
+import { IoLogoVue } from "react-icons/io5";
+import { SiTypescript } from "react-icons/si";
+import { TbDeviceMobileCode } from "react-icons/tb";
 
 const About = () => {
   return (
@@ -15,7 +20,10 @@ const About = () => {
           <div className="row2">
             <h2>My Name is remy oreo & i am a front-end developer</h2>
             <p>
-                I&apos;m a Front-End Engineer  👨🏼‍💻  and a JavaScript Lover ❤️,  I am passionate about crafting digital solutions with a strong emphasis on design, usability  and accessibility. I enjoy creating apps and web experiences that involve meaningful interaction with the user.
+              I&apos;m a Front-End Engineer 👨🏼‍💻 and a JavaScript Lover ❤️, I am
+              passionate about crafting digital solutions with a strong emphasis
+              on design, usability and accessibility. I enjoy creating apps and
+              web experiences that involve meaningful interaction with the user.
             </p>
             <div className="inner-row-container">
               <div className="inner-row">
@@ -47,7 +55,7 @@ const About = () => {
                 </p>
               </div>
             </div>
-            <a href="#" className="btn" style={{marginRight: 10}}>
+            <a href="#" className="btn" style={{ marginRight: 10 }}>
               Download CV
             </a>
             <a href="#contact" className="btn">
@@ -56,9 +64,23 @@ const About = () => {
           </div>
         </div>
 
-        <h1>
-          <span> MY </span> SKILLS
-        </h1>
+        <div className="skillsbox">
+          <h1>
+            <span> MY </span> SKILLS
+          </h1>
+
+          <div className="logos__container">
+            <FaHtml5 size={30}  />
+            <IoLogoCss3 size={30} />
+            <IoLogoJavascript className="i" size={30} />
+            <SiTypescript size={30} />
+            <FaReact className="i" size={30} />
+            <IoLogoVue size={30} />
+            <TbDeviceMobileCode size={30} className="i"/>
+
+          </div>
+        </div>
+
         <div className="about-skills">
           <div className="inner-about-skills">
             <div className="progress1">
@@ -85,9 +107,25 @@ const About = () => {
                 <span></span>
               </div>
             </div>
+            <div className="progress3">
+              <p>
+                TYPESCRIPT <span>75%</span>
+              </p>
+              <div className="progressbar">
+                <span></span>
+              </div>
+            </div>
             <div className="progress4">
               <p>
                 REACT <span>80%</span>
+              </p>
+              <div className="progressbar">
+                <span></span>
+              </div>
+            </div>
+            <div className="progress4">
+              <p>
+                VUE.JS <span>80%</span>
               </p>
               <div className="progressbar">
                 <span></span>
