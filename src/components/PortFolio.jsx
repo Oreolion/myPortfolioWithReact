@@ -40,7 +40,7 @@ const PortFolio = () => {
                 <FcSearch className="i" />
               </a>
             </div>
-            <h4>PROJECT 01</h4>
+            <h6>PROJECT 01: BLOGSITE WITH VANILLA JS</h6>
           </div>
           <div className="box">
             <img
@@ -71,7 +71,7 @@ const PortFolio = () => {
                 <FcSearch className="i" />
               </a>
             </div>
-            <h4>PROJECT 02</h4>
+            <h6>PROJECT 02: FOOD ECOMMERCE SITE WITH REACTJS</h6>
           </div>
           <div className="box">
             <img
@@ -102,7 +102,7 @@ const PortFolio = () => {
                 <FcSearch className="i" />
               </a>
             </div>
-            <h4>PROJECT 03</h4>
+            <h6>PROJECT 03: FOOD ECOMMERCE SITE WITH REACTJS</h6>
           </div>
           <div className="box">
             <img
@@ -133,7 +133,7 @@ const PortFolio = () => {
                 <FcSearch className="i" />
               </a>
             </div>
-            <h4>PROJECT 04</h4>
+            <h6>PROJECT 04: MY GITHUB PROFILE INFO WITH REACTJS</h6>
           </div>
           <div className="box">
             <img
@@ -164,7 +164,7 @@ const PortFolio = () => {
                 <FcSearch className="i" />
               </a>
             </div>
-            <h4>PROJECT 05</h4>
+            <h6>PROJECT 05: TODO APP WITH VUEJS</h6>
           </div>
           <div className="box">
             <img
@@ -174,7 +174,7 @@ const PortFolio = () => {
 
             <div className="icon-box">
               <a
-                href="https://yummyfoodsite.netlify.app/ "
+                href="https://appwith-vue.vercel.app/"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -195,7 +195,7 @@ const PortFolio = () => {
                 <FcSearch className="i" />
               </a>
             </div>
-            <h4>PROJECT 06</h4>
+            <h6>PROJECT 06: MY GITHUB PROFILE INFO WITH REACTJS</h6>
           </div>
         </div>
         <a

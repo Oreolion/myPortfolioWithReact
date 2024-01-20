@@ -444,22 +444,23 @@ h1 span {
 }
 
 .skillsbox {
-    display: flex;
-    flex-direction: row;
-    gap: 16rem;
+  display: flex;
+  flex-direction: row;
+  gap: 16rem;
 }
 
-.skillsbox .logos__container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: .5rem;
-    margin-top: 3rem;
-    padding: .3rem;
-    width: 24rem;
-    border-radius: 1rem;
-    background: rgba(0, 100, 0, 0.2);
 
+.skillsbox .logos__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 3rem;
+  padding: 0.3rem;
+  width: 24rem;
+  height: 5rem;
+  border-radius: 1rem;
+  background: rgba(0, 100, 0, 0.2);
 }
 
 /* my services section */
@@ -592,6 +593,10 @@ h1 span {
   position: relative;
 }
 
+.inner-portfolio .box H6 {
+    background: #FFF;
+}
+
 .inner-portfolio .box:hover img {
   width: 85%;
   height: 85%;
@@ -611,15 +616,13 @@ h1 span {
   color: var(--secondary-color);
   &:hover {
     letter-spacing: 2px;
-    
   }
 }
 
 .inner-portfolio + a:hover .logo {
-    perspective-origin: left top;
-    transform: rotate(720deg);
-    transition-duration: 1s;
-
+  perspective-origin: left top;
+  transform: rotate(720deg);
+  transition-duration: 1s;
 }
 
 .inner-portfolio .box .icon-box {
@@ -807,9 +810,12 @@ h1 span {
   }
 
   .skillsbox {
-    
     gap: 5rem;
-}
+  }
+
+  .skillsbox .logos__container {
+    height: 10rem;
+  }
 }
 
 @media (max-width: 500px) {
@@ -836,11 +842,12 @@ h1 span {
     padding: 0.4rem 1rem;
   }
 
-  
-  
   .skillsbox {
-    
-    gap: 2rem;
+    gap: 0;
     flex-wrap: wrap;
-}
+  }
+
+  .skillsbox .logos__container {
+    height: 8rem;
+  }
 }
