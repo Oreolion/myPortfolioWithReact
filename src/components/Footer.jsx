@@ -3,7 +3,7 @@ const Footer = () => {
     <>
       <footer className="footer">
         <p>
-          created by <span>REMY OREO</span> &copy;2023 || all rights reserved
+          created by <span>REMY OREO</span> &copy;2024 || all rights reserved
         </p>
       </footer>
     </>

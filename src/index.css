@@ -114,7 +114,7 @@ header h3 .ra {
   position: absolute;
   top: 50%;
   z-index: 11111;
-  right: 79.5%;
+  right: 81.5%;
   position: fixed;
   background-color: rgb(230, 252, 230);
   color: var(--primary-color);
@@ -154,7 +154,7 @@ header h3 .ra {
   position: absolute;
   top: 50%;
   z-index: 11111;
-  right: 89.5%;
+  right: 91%;
   position: fixed;
   background-color: var(--primary-color);
   color: #fff;
@@ -186,7 +186,7 @@ header h3 .ra {
 }
 
 .nav-menu {
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 #menu-bar {
@@ -277,7 +277,7 @@ header h3 .ra {
 
 h1 {
   font-size: 2.8rem;
-  --animation-duration: 25s;
+  /* --animation-duration: 25s; */
 }
 
 h1 span {
@@ -548,6 +548,7 @@ h1 span {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
+  margin-bottom: 1rem;
 }
 
 .inner-portfolio .box {
@@ -578,6 +579,23 @@ h1 span {
   bottom: 0.1rem;
   color: #333;
   padding-top: 0.1rem;
+}
+
+.inner-portfolio + a {
+  cursor: pointer;
+  font-weight: bold;
+  color: red;
+  &:hover {
+    letter-spacing: 2px;
+    
+  }
+}
+
+.inner-portfolio + a:hover .logo {
+    perspective-origin: left top;
+    transform: rotate(720deg);
+    transition-duration: 1s;
+
 }
 
 .inner-portfolio .box .icon-box {

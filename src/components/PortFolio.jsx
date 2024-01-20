@@ -1,7 +1,7 @@
 import { FcLink, FcSearch } from "react-icons/fc";
 import { GiRapidshareArrow } from "react-icons/gi";
-import 'animate.css';
-
+import "animate.css";
+import { FiGithub } from "react-icons/fi";
 
 const PortFolio = () => {
   return (
@@ -18,12 +18,27 @@ const PortFolio = () => {
               alt="/"
             />
             <div className="icon-box">
-             <a href="https://yummyfoodsite.netlify.app/ " target="_blank" rel="noreferrer"><FcLink className="i" /></a>
-             <a href="https://yummyfoodsite.netlify.app/ " target="_blank" rel="noreferrer"><GiRapidshareArrow className="i"/></a>
-             <a href="https://yummyfoodsite.netlify.app/ " target="_blank" rel="noreferrer"><FcSearch className="i" /></a>
-              
-              
-              
+              <a
+                href="https://yummyfoodsite.netlify.app/ "
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FcLink className="i" />
+              </a>
+              <a
+                href="https://yummyfoodsite.netlify.app/ "
+                target="_blank"
+                rel="noreferrer"
+              >
+                <GiRapidshareArrow className="i" />
+              </a>
+              <a
+                href="https://yummyfoodsite.netlify.app/ "
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FcSearch className="i" />
+              </a>
             </div>
             <h4>PROJECT 01</h4>
           </div>
@@ -34,11 +49,27 @@ const PortFolio = () => {
             />
 
             <div className="icon-box">
-              
-            <a href="https://stayconsciousblog.netlify.app/ " target="_blank" rel="noreferrer"><FcLink className="i" /></a>
-             <a href="https://stayconsciousblog.netlify.app/ " target="_blank" rel="noreferrer"><GiRapidshareArrow className="i"/></a>
-             <a href="https://stayconsciousblog.netlify.app/ " target="_blank" rel="noreferrer"><FcSearch className="i" /></a>
-              
+              <a
+                href="https://stayconsciousblog.netlify.app/ "
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FcLink className="i" />
+              </a>
+              <a
+                href="https://stayconsciousblog.netlify.app/ "
+                target="_blank"
+                rel="noreferrer"
+              >
+                <GiRapidshareArrow className="i" />
+              </a>
+              <a
+                href="https://stayconsciousblog.netlify.app/ "
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FcSearch className="i" />
+              </a>
             </div>
             <h4>PROJECT 02</h4>
           </div>
@@ -49,11 +80,27 @@ const PortFolio = () => {
             />
 
             <div className="icon-box">
-            
-            <a href="https://yummyfoodsite.netlify.app/ " target="_blank" rel="noreferrer"><FcLink className="i" /></a>
-             <a href="https://yummyfoodsite.netlify.app/ " target="_blank" rel="noreferrer"><GiRapidshareArrow className="i"/></a>
-             <a href="https://yummyfoodsite.netlify.app/ " target="_blank" rel="noreferrer"><FcSearch className="i" /></a>
-              
+              <a
+                href="https://yummyfoodsite.netlify.app/ "
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FcLink className="i" />
+              </a>
+              <a
+                href="https://yummyfoodsite.netlify.app/ "
+                target="_blank"
+                rel="noreferrer"
+              >
+                <GiRapidshareArrow className="i" />
+              </a>
+              <a
+                href="https://yummyfoodsite.netlify.app/ "
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FcSearch className="i" />
+              </a>
             </div>
             <h4>PROJECT 03</h4>
           </div>
@@ -64,11 +111,27 @@ const PortFolio = () => {
             />
 
             <div className="icon-box">
-           
-            <a href="https://yummyfoodsite.netlify.app/ " target="_blank" rel="noreferrer"><FcLink className="i" /></a>
-             <a href="https://yummyfoodsite.netlify.app/ " target="_blank" rel="noreferrer"><GiRapidshareArrow className="i"/></a>
-             <a href="https://yummyfoodsite.netlify.app/ " target="_blank" rel="noreferrer"><FcSearch className="i" /></a>
-              
+              <a
+                href="https://yummyfoodsite.netlify.app/ "
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FcLink className="i" />
+              </a>
+              <a
+                href="https://yummyfoodsite.netlify.app/ "
+                target="_blank"
+                rel="noreferrer"
+              >
+                <GiRapidshareArrow className="i" />
+              </a>
+              <a
+                href="https://yummyfoodsite.netlify.app/ "
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FcSearch className="i" />
+              </a>
             </div>
             <h4>PROJECT 04</h4>
           </div>
@@ -79,11 +142,27 @@ const PortFolio = () => {
             />
 
             <div className="icon-box">
-           
-            <a href="https://mygithubprofileinfo.netlify.app/ " target="_blank" rel="noreferrer"><FcLink className="i" /></a>
-             <a href="https://mygithubprofileinfo.netlify.app/" target="_blank" rel="noreferrer"><GiRapidshareArrow className="i"/></a>
-             <a href="https://mygithubprofileinfo.netlify.app/" target="_blank" rel="noreferrer"><FcSearch className="i" /></a>
-              
+              <a
+                href="https://mygithubprofileinfo.netlify.app/ "
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FcLink className="i" />
+              </a>
+              <a
+                href="https://mygithubprofileinfo.netlify.app/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <GiRapidshareArrow className="i" />
+              </a>
+              <a
+                href="https://mygithubprofileinfo.netlify.app/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FcSearch className="i" />
+              </a>
             </div>
             <h4>PROJECT 05</h4>
           </div>
@@ -94,15 +173,39 @@ const PortFolio = () => {
             />
 
             <div className="icon-box">
-              
-            <a href="https://yummyfoodsite.netlify.app/ " target="_blank" rel="noreferrer"><FcLink className="i" /></a>
-             <a href="https://yummyfoodsite.netlify.app/ " target="_blank" rel="noreferrer"><GiRapidshareArrow className="i"/></a>
-             <a href="https://yummyfoodsite.netlify.app/ " target="_blank" rel="noreferrer"><FcSearch className="i" /></a>
-              
+              <a
+                href="https://yummyfoodsite.netlify.app/ "
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FcLink className="i" />
+              </a>
+              <a
+                href="https://yummyfoodsite.netlify.app/ "
+                target="_blank"
+                rel="noreferrer"
+              >
+                <GiRapidshareArrow className="i" />
+              </a>
+              <a
+                href="https://yummyfoodsite.netlify.app/ "
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FcSearch className="i" />
+              </a>
             </div>
             <h4>PROJECT 06</h4>
           </div>
         </div>
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href="https://github.com/Oreolion?tab=repositories"
+        >
+          You can also check out my github Repositories{" "}
+          <FiGithub size={40} className="logo" />
+        </a>
       </section>
     </>
   );
