@@ -114,7 +114,7 @@ header h3 .ra {
   position: absolute;
   top: 50%;
   z-index: 11111;
-  right: 81.5%;
+  right: 81%;
   position: fixed;
   background-color: rgb(230, 252, 230);
   color: var(--primary-color);
@@ -154,7 +154,7 @@ header h3 .ra {
   position: absolute;
   top: 50%;
   z-index: 11111;
-  right: 91%;
+  right: 90.5%;
   position: fixed;
   background-color: var(--primary-color);
   color: #fff;
