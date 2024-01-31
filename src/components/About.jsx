@@ -12,6 +12,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 const About = () => {
   gsap.registerPlugin(ScrollTrigger);
   const ref = useRef(null);
+  const myref = useRef(null);
   useEffect(() => {
     gsap.fromTo(
         ref.current,
@@ -36,13 +37,37 @@ const About = () => {
         }
       );
   }, []);
+  useEffect(() => {
+    gsap.fromTo(
+        myref.current,
+        {
+          opacity: 0,
+          scale: 0.5,
+          
+        },
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          duration: 2,
+          rotation: 360,
+          ease: "none",
+          scrollTrigger: {
+            trigger: myref.current,
+            start: "top center",
+            end: "bottom top",
+            toggleActions:  "restart none none reset",
+          }
+        }
+      );
+  }, []);
 
   return (
     <>
       <section className="about-me" id="about">
         <h1
           className=""
-          ref={ref}
+          ref={myref}
         >
           <span> ABOUT </span> ME{" "}
         </h1>
