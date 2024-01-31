@@ -2,12 +2,43 @@ import { FiPhoneCall } from "react-icons/fi";
 import { BsFillEnvelopeAtFill } from "react-icons/bs";
 import { FaLocationDot } from "react-icons/fa6";
 import "animate.css"
+import {gsap} from "gsap";
+import { useEffect, useRef } from "react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const Contact = () => {
+
+
+    gsap.registerPlugin(ScrollTrigger);
+  const ref = useRef(null);
+  useEffect(() => {
+    gsap.fromTo(
+        ref.current,
+        {
+          opacity: 0,
+          scale: 0.5,
+          
+        },
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          duration: 2,
+          rotation: 360,
+          ease: "none",
+          scrollTrigger: {
+            trigger: ref.current,
+            start: "top center",
+            end: "bottom top",
+            toggleActions:  "restart none none reset",
+          }
+        }
+      );
+  }, []);
   return (
     <>
       <section className="contact-me" id="contact">
-        <h1 className="animate__animated animate__fadeInTopRight animate__infinite">
+        <h1 className="" ref={ref}>
           <span> CONTACT </span> ME
         </h1>
 

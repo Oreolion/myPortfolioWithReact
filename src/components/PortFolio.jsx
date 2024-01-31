@@ -2,12 +2,44 @@ import { FcLink, FcSearch } from "react-icons/fc";
 import { GiRapidshareArrow } from "react-icons/gi";
 import "animate.css";
 import { FiGithub } from "react-icons/fi";
+import {gsap} from "gsap";
+import { useEffect, useRef } from "react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const PortFolio = () => {
+
+    gsap.registerPlugin(ScrollTrigger);
+  const ref = useRef(null);
+  useEffect(() => {
+    gsap.fromTo(
+        ref.current,
+        {
+          opacity: 0,
+          scale: 0.5,
+          
+        },
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          duration: 2,
+          rotation: 360,
+          ease: "none",
+          scrollTrigger: {
+            trigger: ref.current,
+            start: "top center",
+            end: "bottom top",
+            toggleActions:  "restart none none reset",
+          }
+        }
+      );
+  }, []);
+
+
   return (
     <>
       <section className="portfolio" id="portfolio">
-        <h1 className="animate__animated animate__fadeInTopLeft animate__infinite">
+        <h1 className="" ref={ref}>
           <span> MY </span> PORTFOLIO
         </h1>
 
@@ -199,11 +231,12 @@ const PortFolio = () => {
           </div>
         </div>
         <a
+            className="link"
           target="_blank"
           rel="noreferrer"
           href="https://github.com/Oreolion?tab=repositories"
         >
-          &#62;&#62; You can also check out my github Repositories{" "}
+          &#62;&#62; You can also click here check out my github Repositories{" "}
           <FiGithub size={40} className="logo" />
         </a>
       </section>

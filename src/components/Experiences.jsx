@@ -1,8 +1,41 @@
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useEffect } from "react";
+import { useRef } from "react";
+
 const Experiences = () => {
+
+
+    gsap.registerPlugin(ScrollTrigger);
+  const ref = useRef(null);
+  useEffect(() => {
+    gsap.fromTo(
+        ref.current,
+        {
+          opacity: 0,
+          scale: 0.5,
+          
+        },
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          duration: 2,
+          rotation: 360,
+          ease: "none",
+          scrollTrigger: {
+            trigger: ref.current,
+            start: "top center",
+            end: "bottom top",
+            toggleActions:  "restart none none reset",
+          }
+        }
+      );
+  }, []);
   return (
     <>
       <section className="experiences" id="experience">
-        <h1 className="animate__animated animate__fadeInTopRight animate__infinite">
+        <h1 className="" ref={ref}>
           <span> MY </span> EXPERIENCES
         </h1>
 

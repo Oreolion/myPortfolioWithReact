@@ -4,12 +4,43 @@ import { TbDeviceMobileCode } from "react-icons/tb";
 import { FcMusic } from "react-icons/fc";
 import { GiLargePaintBrush } from "react-icons/gi";
 import "animate.css"
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useRef } from "react";
+import { useEffect } from "react";
 
 const Services = () => {
+
+    gsap.registerPlugin(ScrollTrigger);
+  const ref = useRef(null);
+  useEffect(() => {
+    gsap.fromTo(
+        ref.current,
+        {
+          opacity: 0,
+          scale: 0.5,
+          
+        },
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          duration: 2,
+          rotation: 360,
+          ease: "none",
+          scrollTrigger: {
+            trigger: ref.current,
+            start: "top center",
+            end: "bottom top",
+            toggleActions:  "restart none none reset",
+          }
+        }
+      );
+  }, []);
   return (
     <>
       <section className="service" id="service">
-        <h1 className="animate__animated animate__fadeInTopLeft animate__infinite">
+        <h1 className="" ref={ref}>
           <span> MY </span> SERVICES
         </h1>
         <div className="servicebox-container">

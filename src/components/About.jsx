@@ -1,17 +1,50 @@
 import "animate.css";
+import { useEffect, useRef } from "react";
 import picture from "../assets/images/remy1-removebg-preview.png";
 import { IoLogoCss3, IoLogoJavascript } from "react-icons/io";
 import { FaHtml5, FaReact } from "react-icons/fa6";
 import { IoLogoVue } from "react-icons/io5";
 import { SiTypescript } from "react-icons/si";
 import { TbDeviceMobileCode } from "react-icons/tb";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const About = () => {
+  gsap.registerPlugin(ScrollTrigger);
+  const ref = useRef(null);
+  useEffect(() => {
+    gsap.fromTo(
+        ref.current,
+        {
+          opacity: 0,
+          scale: 0.5,
+          
+        },
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          duration: 2,
+          rotation: 360,
+          ease: "none",
+          scrollTrigger: {
+            trigger: ref.current,
+            start: "top center",
+            end: "bottom top",
+            toggleActions:  "restart none none reset",
+          }
+        }
+      );
+  }, []);
+
   return (
     <>
       <section className="about-me" id="about">
-        <h1 className="animate__animated animate__fadeInTopLeft animate__infinite">
-          ABOUT <span>ME</span>
+        <h1
+          className=""
+          ref={ref}
+        >
+          <span> ABOUT </span> ME{" "}
         </h1>
         <div className="inner-about-me">
           <div className="row1">
@@ -65,19 +98,18 @@ const About = () => {
         </div>
 
         <div className="skillsbox">
-          <h1>
+          <h1 ref={ref}>
             <span> MY </span> SKILLS
           </h1>
 
           <div className="logos__container">
-            <FaHtml5 size={30}  />
+            <FaHtml5 size={30} />
             <IoLogoCss3 size={30} />
             <IoLogoJavascript className="i" size={30} />
             <SiTypescript size={30} />
             <FaReact className="i" size={30} />
             <IoLogoVue size={30} />
-            <TbDeviceMobileCode size={30} className="i"/>
-
+            <TbDeviceMobileCode size={30} className="i" />
           </div>
         </div>
 
