@@ -88,7 +88,7 @@ const Header = () => {
               <FaXTwitter className="logo" />
             </a>
             <a
-              href="https://www.linkedin.com/in/remy-oreo-09b544277/"
+              href="https://www.linkedin.com/in/remy-adedeji"
               target="_blank"
               rel="noreferrer"
             >

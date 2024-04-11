@@ -10,12 +10,12 @@ const Homepage = () => {
           <h5>Hello World...</h5>
           <h1>
             I AM{" "}
-            <span className="animate__animated  animate__slideInRight
-             animate__infinite">
+            <span className="
+             ">
               REMY OREO
             </span>
           </h1>
-          <h3 className="animate__animated  animate__slideInLeft animate__infinite">I am a front-End developer</h3>
+          <h3 className="">I am a front-End developer</h3>
           <p>
             I&apos;m a Front-End Engineer 👨🏼‍💻 and a JavaScript Lover ❤️, I am
             passionate about crafting digital solutions with a strong emphasis
