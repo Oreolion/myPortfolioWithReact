@@ -67,7 +67,7 @@ const About = () => {
             <img src={picture} alt="/" />
           </div>
           <div className="row2">
-            <h2>My Name is remy oreo & i am a front-end developer</h2>
+            <h2>My Name is RA & i am a front-end developer</h2>
             <p>
               I&apos;m a Front-End Engineer 👨🏼‍💻 and a JavaScript Lover ❤️, I am
               passionate about crafting digital solutions with a strong emphasis

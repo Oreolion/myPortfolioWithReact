@@ -283,6 +283,7 @@ h1 {
 h1 span {
   display: inline-block;
   font-size: 3.2rem;
+  white-space: nowrap;
   color: var(--primary-color);
   --animation-duration: 25s;
 }
@@ -304,14 +305,16 @@ h1 span {
 
 .inner-about-me {
   display: flex;
-  gap: 3rem;
+  gap: 5rem;
   flex-wrap: wrap;
   align-items: center;
 }
 
-.about-me .row1 {
-  flex: 1 1 20rem;
+.about-me .inner-about-me .row1 {
+  flex: 1 1 22rem;
   height: 25rem;
+  width: 40rem;
+  margin-left: -4rem;
 }
 
 .row1 img {
@@ -321,7 +324,7 @@ h1 span {
 }
 
 .about-me .row2 {
-  flex: 1 1 20rem;
+  flex: 1 1 22rem;
 }
 
 .about-me h1 {
@@ -329,11 +332,13 @@ h1 span {
 }
 .row2 h2 {
   font-size: 1.7rem;
+  min-width: 22rem;
 }
 
 .row2 p {
   font-size: 1rem;
   margin-bottom: 0.7rem;
+  /* min-width: 20rem; */
 }
 .row2 h2 + p {
   font-weight: bold;
@@ -566,36 +571,7 @@ h1 span {
   font-size: 0.9rem;
 }
 
-/* my portfolio section */
-
-.inner-portfolio {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  margin-bottom: 1rem;
-}
-
-.inner-portfolio .box {
-  width: 18rem;
-  height: 15rem;
-  border: 1rem solid #fff;
-  flex: 1 1 18rem;
-  position: relative;
-  background-color: #fff;
-  border-radius: 0.4rem;
-}
-
-.inner-portfolio .box img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  z-index: 10;
-  position: relative;
-}
-
-.inner-portfolio .box H6 {
-  background: #fff;
-}
+/* moving cursor */
 
 .cursor-1 {
   position: absolute;
@@ -633,6 +609,62 @@ h1 span {
 .cursor-2.active {
   display: none;
 }
+
+/* my portfolio section */
+
+.inner-portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.inner-portfolio .box {
+  width: 18rem;
+  height: 15rem;
+  border: 1rem solid #fff;
+  flex: 1 1 18rem;
+  position: relative;
+  background-color: #fff;
+  border-radius: 0.4rem;
+  position: relative;
+}
+
+.inner-portfolio .box img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: 10;
+  position: relative;
+  opacity: 0.8;
+}
+
+.inner-portfolio .box:hover img {
+  opacity: 0.6;
+}
+
+.inner-portfolio .box h6 {
+  background: transparent;
+  color: rgb(136, 197, 31);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 26rem;
+  font-weight: bold;
+  right: 20%;
+  left: 2rem;
+  z-index: 111;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.inner-portfolio .box:hover h6 {
+  margin-left: -3rem;
+}
+
 .inner-portfolio .box:hover img {
   width: 85%;
   height: 85%;
@@ -682,7 +714,7 @@ h1 span {
   background-color: #eee;
   padding: 0.4rem;
   margin: 0.1rem;
-  margin-left: 2rem;
+  margin-left: 10rem;
   border-radius: 0.5rem;
   text-align: center;
   width: 3rem;
@@ -856,6 +888,10 @@ h1 span {
   .skillsbox .logos__container {
     height: 10rem;
   }
+
+  .about-me .inner-about-me .row1 {
+    margin-left: 0;
+  }
 }
 
 @media (max-width: 500px) {
@@ -897,5 +933,35 @@ h1 span {
 
   .portfolio .link {
     height: 30px;
+  }
+
+  @media (max-width: 320px) {
+    h1 {
+      font-size: 2.2rem;
+    }
+    h1 span {
+      font-size: 2.5rem;
+    }
+
+    .skillsbox .logos__container {
+      height: 13rem;
+    }
+
+    .about-me .inner-about-me .row1 {
+      width: 10rem;
+      margin-left: -2rem;
+      height: 20rem;
+    }
+  }
+
+  .row2 {
+    margin-left: -1rem;
+  }
+
+  .row2 h2 {
+    font-size: 1.5rem;
+  }
+  .row2 p {
+    font-size: 0.9rem;
   }
 }

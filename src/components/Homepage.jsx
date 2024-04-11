@@ -12,7 +12,7 @@ const Homepage = () => {
             I AM{" "}
             <span className="
              ">
-              REMY OREO
+              REMY ADEDEJI
             </span>
           </h1>
           <h3 className="">I am a front-End developer</h3>
