@@ -1,6 +1,6 @@
 import "animate.css";
-import picture from '../assets/images/remyr-removebg-preview.png'
-
+import { TypeAnimation } from "react-type-animation";
+import picture from "../assets/images/remyr-removebg-preview.png";
 
 const Homepage = () => {
   return (
@@ -9,13 +9,33 @@ const Homepage = () => {
         <div className="content">
           <h5>Hello World...</h5>
           <h1>
-            I AM{" "}
-            <span className="
-             ">
-              REMY ADEDEJI
-            </span>
+            I AM <br />
+            <TypeAnimation
+              sequence={["", 500, "REMY ADEDEJI", 2000]}
+              style={{ fontSize: "3rem" }}
+              speed={10}
+              repeat={2}
+            />
           </h1>
-          <h3 className="">I am a front-End developer</h3>
+          <h3 className="">
+            <TypeAnimation
+              preRenderFirstString={true}
+              sequence={[
+                500,
+                "I am a front-End developer", // initially rendered starting point
+                1000,
+                "I am a React developer",
+                1000,
+                "I am a Vue developer",
+                1000,
+                "I am a Javascript developer",
+                500,
+              ]}
+              speed={30}
+              style={{ fontSize: "1.5rem" }}
+              repeat={Infinity}
+            />
+          </h3>
           <p>
             I&apos;m a Front-End Engineer 👨🏼‍💻 and a JavaScript Lover ❤️, I am
             passionate about crafting digital solutions with a strong emphasis
