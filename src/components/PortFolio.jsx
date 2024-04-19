@@ -110,21 +110,21 @@ const PortFolio = () => {
 
             <div className="icon-box">
               <a
-                href="https://yummyfoodsite.netlify.app/ "
+                href="https://mygithubprofileinfo.netlify.app/"
                 target="_blank"
                 rel="noreferrer"
               >
                 <FcLink className="i" />
               </a>
               <a
-                href="https://yummyfoodsite.netlify.app/ "
+                href="https://mygithubprofileinfo.netlify.app/"
                 target="_blank"
                 rel="noreferrer"
               >
                 <GiRapidshareArrow className="i" />
               </a>
               <a
-                href="https://yummyfoodsite.netlify.app/ "
+                href="https://mygithubprofileinfo.netlify.app/"
                 target="_blank"
                 rel="noreferrer"
               >

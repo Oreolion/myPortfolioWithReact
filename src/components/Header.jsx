@@ -50,10 +50,10 @@ const Header = () => {
           ref={myRef}
         >
           <div className="header-logo">
-            <h2>
-              <span> REMY </span> OREO
+            <h2 className="ra">
+             RA
             </h2>
-            <h3 className="ra"> RA</h3>
+            {/* <h3 className="ra"> RA</h3> */}
           </div>
 
           <nav className="nav-menu">

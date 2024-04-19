@@ -99,9 +99,6 @@ a {
   transition-timing-function: ease-in-out;
 }
 
-header h3 .ra {
-  display: none;
-}
 
 .close-btn {
   cursor: pointer;
@@ -133,8 +130,28 @@ header h3 .ra {
   width: 1rem;
   background-color: var(--primary-color);
 }
+.header-logo .ra {
+    color: var(--primary-color);
+    margin: 0 auto;
+    margin-bottom: 2.5rem;
+    margin-top: -1rem;
+    background-color: rgb(230, 252, 230);
+    border-top-right-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem;
+    width: 4.5rem;
+    font-size: 2.5rem;
+    
+}
 
-.collapsebtn h2,
+.collapsebtn .ra {
+  background-color: rgb(230, 252, 230);
+  color: var(--primary-color);
+  border-top-right-radius: 1.5rem;
+  border-bottom-left-radius: 1.5rem;
+  max-width: 4.5rem;
+  margin-left: -2.3rem;
+}
+
 .collapsebtn li {
   display: none;
 }
@@ -167,21 +184,13 @@ header h3 .ra {
   }
 }
 
-.header-logo {
-  color: #fff;
-  margin-bottom: 2.5rem;
-}
-.header-logo span {
-  color: var(--primary-color);
-}
 
-.collapsebtn h3 {
+.collapsebtn h2 {
   margin-left: -2.3rem;
-  font-size: 3rem;
   color: var(--secondary-color);
 }
 
-.collapsebtn h3 .ra {
+.collapsebtn h2 .ra {
   display: block;
 }
 
@@ -460,7 +469,7 @@ h1 span {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 1rem;
   margin-top: 3rem;
   padding: 0.3rem;
   width: 24rem;
