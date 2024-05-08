@@ -69,39 +69,40 @@ const PortFolio = () => {
                 <FcSearch className="i" />
               </a>
             </div>
-            <h6>PROJECT 01: THE READ ALONG(RA) BLOGGING APP</h6>
+            <h6>PROJECT 01: THE READ ALONG(RA) BLOGGING APP WITH VUEJS</h6>
           </div>
           <div className="box">
             <img
-              src="https://media.istockphoto.com/id/1194380325/photo/design-tools-top-view-of-a-designer-using-graphic-tablet-and-working-with-computer-while.jpg?b=1&s=170667a&w=0&k=20&c=_RKqjnTxOBIqkwlZJliSKWSOP_Xqa1tvTEohC7nGvT0="
+              src="https://media.istockphoto.com/id/1206638576/photo/website-designer-creative-planning-application-developer-development-draft-sketch-drawing.jpg?b=1&s=170667a&w=0&k=20&c=oBMDUyi-m6ZW6OVArW4kNcsiUpRr7bTD5oGdiDqU708="
               alt="/"
             />
 
             <div className="icon-box">
               <a
-                href="https://urlshortnerapp-dacce.web.app"
+                href="https://shopbyra.vercel.app"
                 target="_blank"
                 rel="noreferrer"
               >
                 <FcLink className="i" />
               </a>
               <a
-                href="https://urlshortnerapp-dacce.web.app "
+                href="https://shopbyra.vercel.app"
                 target="_blank"
                 rel="noreferrer"
               >
                 <GiRapidshareArrow className="i" />
               </a>
               <a
-                href="https://urlshortnerapp-dacce.web.app"
+                href="https://shopbyra.vercel.app"
                 target="_blank"
                 rel="noreferrer"
               >
                 <FcSearch className="i" />
               </a>
             </div>
-            <h6>PROJECT 02: URL SHORTENNING APP WITH VUE.JS</h6>
+            <h6>PROJECT 02: ECOMMERCE PLATFORM WITH REACTJS</h6>
           </div>
+         
           <div className="box">
             <img
               src="https://media.istockphoto.com/id/1325763688/photo/web-design-development-design-studio-creative-process-3d-render.jpg?b=1&s=170667a&w=0&k=20&c=y-KRAivlW6VMvZzzMqt9ngerUIIEu4gP8HLMONKNO4A="
@@ -133,36 +134,37 @@ const PortFolio = () => {
             </div>
             <h6>PROJECT 03: MY GITHUB PROFILE APP WITH REACTJS</h6>
           </div>
+         
           <div className="box">
             <img
-              src="https://media.istockphoto.com/id/1206638576/photo/website-designer-creative-planning-application-developer-development-draft-sketch-drawing.jpg?b=1&s=170667a&w=0&k=20&c=oBMDUyi-m6ZW6OVArW4kNcsiUpRr7bTD5oGdiDqU708="
+              src="https://media.istockphoto.com/id/1194380325/photo/design-tools-top-view-of-a-designer-using-graphic-tablet-and-working-with-computer-while.jpg?b=1&s=170667a&w=0&k=20&c=_RKqjnTxOBIqkwlZJliSKWSOP_Xqa1tvTEohC7nGvT0="
               alt="/"
             />
 
             <div className="icon-box">
               <a
-                href="https://yummyfoodsite.netlify.app/ "
+                href="https://urlshortnerapp-dacce.web.app"
                 target="_blank"
                 rel="noreferrer"
               >
                 <FcLink className="i" />
               </a>
               <a
-                href="https://yummyfoodsite.netlify.app/ "
+                href="https://urlshortnerapp-dacce.web.app "
                 target="_blank"
                 rel="noreferrer"
               >
                 <GiRapidshareArrow className="i" />
               </a>
               <a
-                href="https://yummyfoodsite.netlify.app/ "
+                href="https://urlshortnerapp-dacce.web.app"
                 target="_blank"
                 rel="noreferrer"
               >
                 <FcSearch className="i" />
               </a>
             </div>
-            <h6>PROJECT 04: FOOD ECOMMERCE SITE WITH REACTJS</h6>
+            <h6>PROJECT 04: URL SHORTENNING APP WITH VUE.JS</h6>
           </div>
 
           <div className="box">
