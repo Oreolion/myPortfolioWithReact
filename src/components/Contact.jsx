@@ -58,7 +58,7 @@ const Contact = () => {
             <a href="tellto:+2348102871625" className="fa-solid fa-phone">
               <FiPhoneCall />
             </a>
-            <h3>my number</h3>
+            <h3>My Whatsapp</h3>
             <p>+2348102871625</p>
             <p>+2540745633397</p>
           </div>

@@ -834,6 +834,7 @@ h1 span {
   text-align: center;
   font-size: 1rem;
   padding: 1rem 9%;
+  width: 100vw;
 }
 
 .footer span {

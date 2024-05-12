@@ -123,8 +123,8 @@ const Services = () => {
             <div className="icon-box">
               <GiLargePaintBrush className="i" />
             </div>
-            <h3>Web Scraper</h3>
-            <p>Providing Leads for Marketing and Search Engine Operations</p>
+            <h3>SEO Expert and Web Scraper</h3>
+            <p>Providing Leads for Marketing and Search Engine Optimization.</p>
           </div>
         </div>
       </section>
