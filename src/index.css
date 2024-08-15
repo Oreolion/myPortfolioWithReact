@@ -360,8 +360,8 @@ h1 span {
   color: var(--primary-color);
 }
 
-.row2 .inner-row-container{
-    margin-bottom: 1rem;
+.row2 .inner-row-container {
+  margin-bottom: 1rem;
 }
 
 .inner-row-container {
@@ -480,6 +480,12 @@ h1 span {
   padding: 0.3rem;
   border-radius: 1rem;
   background: rgba(0, 100, 0, 0.2);
+}
+
+.logos__container svg {
+  &:hover {
+    transform: rotate(60deg);
+  }
 }
 
 /* my services section */
@@ -958,25 +964,6 @@ h1 span {
     height: 30px;
   }
 
-  @media (max-width: 320px) {
-    h1 {
-      font-size: 2.2rem;
-    }
-    h1 span {
-      font-size: 2.5rem;
-    }
-
-    .skillsbox .logos__container {
-      max-width: 20rem;
-    }
-
-    .about-me .inner-about-me .row1 {
-      width: 10rem;
-      margin-left: -2rem;
-      height: 20rem;
-    }
-  }
-
   .row2 {
     margin-left: -1rem;
   }
@@ -986,5 +973,24 @@ h1 span {
   }
   .row2 p {
     font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 320px) {
+  h1 {
+    font-size: 2rem;
+  }
+  h1 span {
+    font-size: 2.2rem;
+  }
+
+  .skillsbox .logos__container {
+    max-width: 20rem;
+  }
+
+  .about-me .inner-about-me .row1 {
+    width: 10rem;
+    margin-left: -2rem;
+    height: 20rem;
   }
 }

@@ -480,7 +480,7 @@ const About = () => {
 
           <div className="box-container">
             <div className="box">
-              <h2>&gt;&gt;2+</h2>
+              <h2>&gt;&gt;3+</h2>
               <p>Years of experience</p>
             </div>
             <div className="box">
