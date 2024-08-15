@@ -3,6 +3,8 @@ import { IoLogoJavascript } from "react-icons/io5";
 import { TbDeviceMobileCode } from "react-icons/tb";
 import { FcMusic } from "react-icons/fc";
 import { GiLargePaintBrush } from "react-icons/gi";
+import { TbBrandNextjs } from "react-icons/tb";
+import { SiNuxtdotjs } from "react-icons/si";
 import "animate.css";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -44,33 +46,22 @@ const Services = () => {
         <div className="servicebox-container">
           <div className="box">
             <div className="icon-box">
-              <i className="fa-solid fa-code"></i>
-              <FaCode className="i" />
+            <TbBrandNextjs className="i"/>
             </div>
-            <h3>Web design</h3>
+            <h3>NextJs Developer</h3>
             <p>
-              I am passionate about crafting digital solutions with a strong
-              emphasis on design
+              Next.Js is a great Javascript Framework built on React.Js Library
+              for building Full stack web applications.
             </p>
           </div>
           <div className="box">
             <div className="icon-box">
-              <IoLogoJavascript className="i" />
+              <SiNuxtdotjs className="i"/>
             </div>
-            <h3>JavaScript Developer </h3>
+            <h3>Nuxt Developer</h3>
             <p>
-              I love solving problems and Building Web and Mobile experiences
-              with Javascript❤️
-            </p>
-          </div>
-          <div className="box">
-            <div className="icon-box">
-              <TbDeviceMobileCode className="i" />
-            </div>
-            <h3>Responsive design</h3>
-            <p>
-              I Develop mobile and screen Responsive Digital experiences
-              including web accessibilites.
+              Nuxt.Js is a great Javascript framework built on Vue.js Library
+              for building Full stack web applications.
             </p>
           </div>
           <div className="box">
@@ -109,6 +100,50 @@ const Services = () => {
               building cool progressive web apps experiences so delightful.
             </p>
           </div>
+          <div className="box">
+            <div className="icon-box">
+              <IoLogoJavascript className="i" />
+            </div>
+            <h3>JavaScript Developer </h3>
+            <p>
+              I love solving problems and Building Web and Mobile experiences
+              with Javascript❤️
+            </p>
+          </div>
+          <div className="box">
+            <div className="icon-box">
+              <i className="fa-solid fa-code"></i>
+              <FaCode className="i" />
+            </div>
+            <h3>AI Powered Apps</h3>
+            <p>
+              I am passionate about crafting AI powered digital solutions with a
+              strong emphasis on usability, accessibility and designs.
+            </p>
+          </div>
+          <div className="box">
+            <div className="icon-box">
+              <i className="fa-solid fa-code"></i>
+              <FaCode className="i" />
+            </div>
+            <h3>UI design</h3>
+            <p>
+              I am passionate about crafting digital solutions with a strong
+              emphasis on design
+            </p>
+          </div>
+
+          <div className="box">
+            <div className="icon-box">
+              <TbDeviceMobileCode className="i" />
+            </div>
+            <h3>Responsive design</h3>
+            <p>
+              I Develop mobile and screen Responsive Digital experiences
+              including web accessibilites.
+            </p>
+          </div>
+
           <div className="box">
             <div className="icon-box">
               <FcMusic className="i" />

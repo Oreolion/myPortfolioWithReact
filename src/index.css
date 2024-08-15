@@ -344,6 +344,7 @@ h1 span {
 .row2 h2 {
   font-size: 1.7rem;
   min-width: 22rem;
+  margin-bottom: 1rem;
 }
 
 .row2 p {
@@ -357,6 +358,10 @@ h1 span {
 
 .row2 p span {
   color: var(--primary-color);
+}
+
+.row2 .inner-row-container{
+    margin-bottom: 1rem;
 }
 
 .inner-row-container {
@@ -473,8 +478,6 @@ h1 span {
   gap: 1rem;
   margin-top: 1rem;
   padding: 0.3rem;
-  min-width: 30rem;
-  height: 10rem;
   border-radius: 1rem;
   background: rgba(0, 100, 0, 0.2);
 }
@@ -905,7 +908,7 @@ h1 span {
   }
 
   .skillsbox .logos__container {
-    height: 10rem;
+    /* height: 14rem; */
   }
 
   .about-me .inner-about-me .row1 {
@@ -943,7 +946,8 @@ h1 span {
   }
 
   .skillsbox .logos__container {
-    height: 8rem;
+    max-width: 24rem;
+    height: 12rem;
   }
 
   .inner-portfolio {
@@ -963,7 +967,7 @@ h1 span {
     }
 
     .skillsbox .logos__container {
-      height: 13rem;
+      max-width: 20rem;
     }
 
     .about-me .inner-about-me .row1 {

@@ -39,7 +39,16 @@ const Homepage = () => {
               preRenderFirstString={true}
               sequence={[
                 500,
-                "I am a front-End developer", // initially rendered starting point
+                "I am a Full-Stack developer", 
+
+                1000,
+                "I am an AI Powered Apps developer",
+
+                1000,
+                "I am a NextJs developer",
+
+                1000,
+                "I am a Nuxt developer",
 
                 1000,
                 "I am a React developer",
@@ -57,7 +66,7 @@ const Homepage = () => {
             />
           </h3>
           <p>
-            I&apos;m a Front-End Engineer 👨🏼‍💻 and a JavaScript Lover ❤️, I am
+            I&apos;m a Full-Stack Engineer 👨🏼‍💻, a JavaScript Lover❤️ and AI Enthusiast who love to build AI Powered Apps, I am
             passionate about crafting digital solutions with a strong emphasis
             on design, usability and accessibility. I enjoy creating apps and
             web experiences that involve meaningful interaction with the user.

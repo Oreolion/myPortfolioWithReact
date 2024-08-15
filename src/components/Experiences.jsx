@@ -76,7 +76,7 @@ const Experiences = () => {
           <div className="experiencebox">
             <div className="content-box">
               <h5>2024</h5>
-              <h2>Front-End Development</h2>
+              <h2>Full-Stack Development</h2>
               <p>
                 Building personal projects, Freelancing, improving my skills by
                 learning frameworks and new technologies and building different
