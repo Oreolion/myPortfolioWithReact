@@ -43,7 +43,7 @@ const PortFolio = () => {
         <div className="inner-portfolio">
           <div className="box">
             <img
-              src="/src/assets/images/istockphoto-1759628359-612x612.webp"
+              src="https://media.istockphoto.com/id/1759628359/photo/the-designer-team-is-designing-the-uxui-system-to-make-the-uxui-system-work-well-on-new.webp?b=1&s=612x612&w=0&k=20&c=BFHh_kv5O4N7r-Kz8SsSqFTzvfjIzQ5BdHMGN7x5zHE="
               alt="/"
             />
             <div className="icon-box">
@@ -76,7 +76,7 @@ const PortFolio = () => {
           </div>
           <div className="box">
             <img
-              src="/src/assets/images/istockphoto-1906630287-612x612.webp"
+              src="https://media.istockphoto.com/id/1906630287/photo/process-of-creating-an-interface-for-a-mobile-app-user-interface-and-experience-concept.webp?b=1&s=612x612&w=0&k=20&c=qQZlTNdRT9oICOAIfn0-XP-6o4twMrOBKY0Ema0pzTg="
               alt="/"
             />
 

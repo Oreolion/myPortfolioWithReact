@@ -457,7 +457,7 @@ const About = () => {
             </svg>
             <img
               alt="icons8"
-              src="/src/assets/images/icons8-mongo-db-48.png"
+              src="https://img.icons8.com/color/48/mongo-db.png"
             ></img>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -475,7 +475,7 @@ const About = () => {
                 ></path>
               </g>
             </svg>
-            <img alt="icons8" src="/src/assets/images/icons8-ai-64.png"></img>
+            <img alt="icons8" src="https://img.icons8.com/external-inipagistudio-mixed-inipagistudio/64/external-ai-web-programmer-inipagistudio-mixed-inipagistudio.png"></img>
           </div>
 
           <div className="box-container">
