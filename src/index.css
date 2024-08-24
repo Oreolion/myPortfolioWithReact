@@ -373,64 +373,6 @@ h1 span {
   margin-bottom: 2rem;
 }
 
-.progress1 p,
-.progress2 p,
-.progress3 p,
-.progress4 p,
-.progress5 P,
-.progress6 P {
-  font-size: 1rem;
-  display: flex;
-  justify-content: space-between;
-}
-
-.progress1 .progressbar,
-.progress2 .progressbar,
-.progress3 .progressbar,
-.progress4 .progressbar,
-.progress5 .progressbar,
-.progress6 .progressbar {
-  background-color: #999;
-  width: 100%;
-  height: 0.8rem;
-  border-radius: 5rem;
-}
-
-.progress1 .progressbar span,
-.progress2 .progressbar span,
-.progress3 .progressbar span,
-.progress4 .progressbar span,
-.progress5 .progressbar span,
-.progress6 .progressbar span {
-  background-color: var(--secondary-color);
-  height: 0.8rem;
-  display: block;
-  border-radius: 8rem;
-}
-
-.progress1 .progressbar span {
-  width: 90%;
-}
-.progress2 .progressbar span {
-  width: 80%;
-}
-.progress3 .progressbar span {
-  width: 75%;
-}
-.progress4 .progressbar span {
-  width: 80%;
-}
-
-.progress4 .progressbar span {
-  width: 70%;
-}
-
-.progress5 .progressbar span {
-  width: 90%;
-}
-.progress6 .progressbar span {
-  width: 80%;
-}
 
 .about-skills {
   display: flex;

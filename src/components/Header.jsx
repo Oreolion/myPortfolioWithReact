@@ -14,7 +14,6 @@ const Header = () => {
   const myRef = useRef(null);
 
   const handleMenuBtn = () => {
-    console.log(myRef);
     myRef.current.classList.toggle("active");
     setIsToggle(!isToggle);
     setCloseBtn(!closeBtn);
