@@ -1,4 +1,5 @@
 import { useState, useRef } from "react";
+import PropTypes from "prop-types";
 import { IoMdCloseCircle } from "react-icons/io";
 import { FaXTwitter } from "react-icons/fa6";
 import { BsInstagram } from "react-icons/bs";
@@ -6,22 +7,17 @@ import { FiLinkedin, FiFacebook, FiGithub } from "react-icons/fi";
 import { CgMenuGridO } from "react-icons/cg";
 import "animate.css";
 
-const Header = () => {
-  const [menu, setMenu] = useState(false);
+const Header = ({ menu, setMenu }) => {
   const [header] = useState(true);
-  const [closeBtn, setCloseBtn] = useState(false);
-  const [isToggle, setIsToggle] = useState(false);
+  const [closeBtn, setCloseBtn] = useState(true);
+  const [isToggle, setIsToggle] = useState(true);
   const myRef = useRef(null);
 
   const handleMenuBtn = () => {
     myRef.current.classList.toggle("active");
     setIsToggle(!isToggle);
     setCloseBtn(!closeBtn);
-    if (!menu) {
-      setMenu(true);
-    } else {
-      setMenu(false);
-    }
+    setMenu(!menu);
   };
 
   window.onscroll = () => {
@@ -49,9 +45,7 @@ const Header = () => {
           ref={myRef}
         >
           <div className="header-logo">
-            <h2 className="ra">
-             RA
-            </h2>
+            <h2 className="ra">RA</h2>
             {/* <h3 className="ra"> RA</h3> */}
           </div>
 
@@ -131,6 +125,11 @@ const Header = () => {
       )}
     </>
   );
+};
+
+Header.propTypes = {
+  menu: PropTypes.bool,
+  setMenu: PropTypes.func,
 };
 
 export default Header;

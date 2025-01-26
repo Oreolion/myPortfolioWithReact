@@ -42,23 +42,17 @@ body {
 
 section {
   padding: 1.7rem 10%;
-  /* margin-left: 14rem; */
   min-height: 100vh;
-
-}
-
-.container {
-  display: flex;
 }
 
 .containercontent {
-  flex-grow: 1;
-  margin-left: 6rem;
+  /* flex-grow: 1; */
+  margin-left: 16rem;
   transition: margin-left 0.3s ease-in-out;
 }
 
-.containercontent.expanded {
-  margin-left: 14rem;
+.expanded {
+  margin-left: 8rem;
 }
 
 ul {
@@ -79,6 +73,7 @@ a {
   color: #ddd;
   font-weight: bold;
   cursor: pointer;
+  z-index: 111;
 }
 
 .btn:hover {
@@ -86,14 +81,6 @@ a {
   letter-spacing: 0.3rem;
   color: red;
 }
-
-/* .toggleactive {
-  transform: rotate(180deg);
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  border-top-right-radius: 2rem;
-  border-bottom-right-radius: 2rem;
-} */
 
 .header {
   background-color: #222;
@@ -281,14 +268,20 @@ a {
   gap: 1.5rem;
   padding-top: 2rem;
 }
+.homepage .typed__format {
+  font-size: 3rem;
+  color: #ddd;
+}
 
 .homepage .image-container {
-  flex: 1 1 22rem;
+  flex: 1 1 20rem;
+  max-height: 15rem;
 }
 
 .homepage .image-container img {
   width: 100%;
   box-shadow: 0 0.9px 1px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
 }
 
 .homepage .content {
@@ -303,7 +296,6 @@ a {
 h1 {
   font-size: 2.8rem;
   white-space: nowrap;
-  /* --animation-duration: 25s; */
 }
 
 h1 span {
@@ -331,16 +323,17 @@ h1 span {
 
 .inner-about-me {
   display: flex;
-  gap: 5rem;
+  gap: 8rem;
   flex-wrap: wrap;
   align-items: center;
+  margin-left: -4rem;
 }
 
 .about-me .inner-about-me .row1 {
   flex: 1 1 22rem;
-  height: 25rem;
+  height: 22rem;
   width: 40rem;
-  margin-left: -4rem;
+  margin-left: -5rem;
 }
 
 .row1 img {
@@ -420,6 +413,10 @@ h1 span {
   flex: 1 1 20rem;
 }
 
+.skill__section {
+  margin-left: -3rem;
+}
+
 .skillsbox {
   display: flex;
   flex-direction: row;
@@ -448,12 +445,14 @@ h1 span {
 
 .service h1 {
   margin-bottom: 2rem;
+  margin-left: -3rem;
 }
 
 .servicebox-container {
   display: flex;
   flex-wrap: wrap;
   gap: 3.3rem;
+  margin-left: -3rem;
 }
 
 .servicebox-container .box {
@@ -507,7 +506,7 @@ h1 span {
 .inner-experience {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .experiencebox {
@@ -593,8 +592,9 @@ h1 span {
 .inner-portfolio {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 3rem;
   margin-bottom: 1rem;
+  margin-left: -3rem;
 }
 
 .inner-portfolio .box {
@@ -713,10 +713,15 @@ h1 span {
 
 /* contact me section */
 
+.contact-me h1 {
+  margin-left: -3rem;
+}
+
 .inner-contact {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+  margin-left: -3rem;
 }
 
 .inner-contact .box {
@@ -800,6 +805,7 @@ h1 span {
   font-size: 1rem;
   padding: 1rem 9%;
   width: 100vw;
+  margin-left: -3rem;
 }
 
 .footer span {
@@ -810,6 +816,10 @@ h1 span {
   section {
     padding: 1rem 5%;
     margin: 0.5rem;
+  }
+
+  .containercontent {
+    margin-left: 2rem;
   }
 
   .header {
@@ -859,6 +869,8 @@ h1 span {
 
   .homepage {
     padding-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: -2rem;
   }
 
   .homepage .content {
@@ -869,18 +881,27 @@ h1 span {
     gap: 5rem;
   }
 
-  .skillsbox .logos__container {
-    /* height: 14rem; */
-  }
-
-  .about-me .inner-about-me .row1 {
-    margin-left: 0;
+  .inner-about-me {
+    gap: 3rem;
   }
 }
 
 @media (max-width: 500px) {
   .container {
-    margin-left: 0;
+    margin-left: -2rem;
+  }
+
+  .homepage {
+    margin-top: -2rem;
+  }
+
+  .homepage .content {
+    margin-left: 2rem;
+  }
+
+  .homepage .image-container {
+    height: 10rem;
+    margin-top: -15rem;
   }
 
   #menu-bar {
@@ -896,6 +917,15 @@ h1 span {
     margin-bottom: 0.5rem;
   }
 
+  .homepage .homepage__text {
+    font-size: 0.9rem;
+    max-width: 23rem;
+  }
+
+  .homepage .typed__format {
+    font-size: 2rem;
+  }
+
   .header {
     width: 100%;
     padding-top: 6rem;
@@ -904,6 +934,17 @@ h1 span {
 
   .btn {
     padding: 0.4rem 1rem;
+  }
+  .inner-about-me {
+    margin-left: 0rem;
+  }
+
+  .about-me .inner-about-me .row1 {
+    height: 20rem;
+    margin-left: -4rem;
+  }
+  .skill__section {
+    margin-left: 0rem;
   }
 
   .skillsbox {
@@ -934,14 +975,37 @@ h1 span {
   .row2 p {
     font-size: 0.9rem;
   }
+  .servicebox-container {
+    margin-left: 0rem;
+  }
+  .inner-portfolio {
+    margin-left: 0rem;
+  }
+
+  .contact-me h1 {
+    margin-left: -1rem;
+  }
+
+  .inner-contact {
+    margin-left: -1rem;
+  }
+
+  .footer {
+    margin-left: 0;
+    font-size: 0.8rem;
+  }
 }
 
 @media (max-width: 320px) {
   h1 {
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
   h1 span {
-    font-size: 2.2rem;
+    font-size: 2rem;
+  }
+
+  .homepage {
+    gap: 4rem;
   }
 
   .skillsbox .logos__container {

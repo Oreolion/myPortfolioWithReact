@@ -13,6 +13,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 function App() {
+  const [menu, setMenu] = useState(false);
   const [cursor1Style, setCursor1Style] = useState({
     top: 0,
     left: 0,
@@ -86,9 +87,9 @@ function App() {
   }, []);
 
   return (
-    <>
-      <Header />
-      <div className="container" data-aos="zoom-out" data-aos-duration="500">
+    <div className="container">
+      <Header menu={menu} setMenu={setMenu} />
+      <div className={`containercontent ${menu ? "" : "expanded"}`}>
         {/* custom cursor */}
 
         <div style={cursor1Style} className="cursor-1"></div>
@@ -107,7 +108,7 @@ function App() {
         className="up-arrow animate__animated animate__backInRight"
         onClick={scrollToTop}
       />
-    </>
+    </div>
   );
 }
 

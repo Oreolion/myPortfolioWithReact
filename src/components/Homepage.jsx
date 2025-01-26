@@ -21,25 +21,23 @@ const Homepage = () => {
                 sequence={[
                   "",
                   1000,
-                  () => setTextColor("rgb(136, 197, 31)"),
+                  () => setTextColor("rgb(77, 109, 24)"),
 
-                  "REMY ADEDEJI",
+                  "REMY ADEDEJI (RA)",
                   2000,
-
                 ]}
-                style={{ fontSize: "3rem", color:  "#ddd",  }}
+                className="typed__format"
                 speed={10}
                 repeat={2}
               />
             </div>
           </h1>
-          <h3 className=""
-        >
+          <h3 className="">
             <TypeAnimation
               preRenderFirstString={true}
               sequence={[
                 500,
-                "I am a Full-Stack developer", 
+                "I am a Full-Stack developer",
 
                 1000,
                 "I am an AI Powered Apps developer",
@@ -58,18 +56,18 @@ const Homepage = () => {
                 1000,
                 "I am a Javascript developer",
                 500,
-
               ]}
               speed={30}
               style={{ fontSize: "1.5rem" }}
               repeat={Infinity}
             />
           </h3>
-          <p>
-            I&apos;m a Full-Stack Engineer 👨🏼‍💻, a JavaScript Lover❤️ and AI Enthusiast who love to build AI Powered Apps, I am
-            passionate about crafting digital solutions with a strong emphasis
-            on design, usability and accessibility. I enjoy creating apps and
-            web experiences that involve meaningful interaction with the user.
+          <p className="homepage__text">
+            I&apos;m a Full-Stack Engineer 👨🏼‍💻, a JavaScript Lover❤️ and AI
+            Enthusiast who love to build AI Powered Apps, I am passionate about
+            crafting digital solutions with a strong emphasis on design,
+            usability and accessibility. I enjoy creating apps and web
+            experiences that involve meaningful interaction with the user.
           </p>
           <a href="#about" className="btn">
             {" "}
@@ -77,7 +75,7 @@ const Homepage = () => {
           </a>
         </div>
         <div className="image-container">
-          <img src={picture} alt="/" />
+          <img src={picture} alt="my-pic" />
         </div>
       </section>
     </>
