@@ -42,8 +42,23 @@ body {
 
 section {
   padding: 1.7rem 10%;
-  margin-left: 14rem;
+  /* margin-left: 14rem; */
   min-height: 100vh;
+
+}
+
+.container {
+  display: flex;
+}
+
+.containercontent {
+  flex-grow: 1;
+  margin-left: 6rem;
+  transition: margin-left 0.3s ease-in-out;
+}
+
+.containercontent.expanded {
+  margin-left: 14rem;
 }
 
 ul {
@@ -372,7 +387,6 @@ h1 span {
 .inner-about-skills {
   margin-bottom: 2rem;
 }
-
 
 .about-skills {
   display: flex;
@@ -865,6 +879,10 @@ h1 span {
 }
 
 @media (max-width: 500px) {
+  .container {
+    margin-left: 0;
+  }
+
   #menu-bar {
     z-index: 10000;
   }
