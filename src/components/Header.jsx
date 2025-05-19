@@ -5,6 +5,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import { BsInstagram } from "react-icons/bs";
 import { FiLinkedin, FiFacebook, FiGithub } from "react-icons/fi";
 import { CgMenuGridO } from "react-icons/cg";
+import { motion } from "framer-motion";
 import "animate.css";
 
 const Header = ({ menu, setMenu }) => {
@@ -29,99 +30,116 @@ const Header = ({ menu, setMenu }) => {
 
   return (
     <>
-      {!menu && !isToggle ? (
-        <CgMenuGridO id="menu-bar" onClick={handleMenuBtn} />
-      ) : (
-        <IoMdCloseCircle id="menu-bar" onClick={handleMenuBtn} />
-      )}
+      <motion.button
+        initial={{ opacity: 0, x: 20 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.5 }}
+        className="fixed top-6 right-6 z-50 bg-primary text-white p-3 rounded-lg shadow-lg hover:bg-secondary transition-all duration-300 md:hidden"
+        onClick={handleMenuBtn}
+      >
+        {!menu && !isToggle ? (
+          <CgMenuGridO className="text-2xl" />
+        ) : (
+          <IoMdCloseCircle className="text-2xl" />
+        )}
+      </motion.button>
 
       {header && (
-        <header
-          className={
-            isToggle
-              ? "header active"
-              : `header ${closeBtn} ? " collapsebtn " : "" `
-          }
+        <motion.header
+          initial={{ x: -300 }}
+          animate={{ x: 0 }}
+          transition={{ type: "spring", stiffness: 100 }}
+          className={`header ${isToggle ? "active" : ""} ${
+            closeBtn ? "collapsebtn" : ""
+          }`}
           ref={myRef}
         >
           <div className="header-logo">
-            <h2 className="ra">RA</h2>
-            {/* <h3 className="ra"> RA</h3> */}
+            <motion.h2
+              whileHover={{ scale: 1.1 }}
+              className="text-4xl font-bold bg-white text-primary px-4 py-2 rounded-tr-2xl rounded-bl-2xl"
+            >
+              RA
+            </motion.h2>
           </div>
 
           <nav className="nav-menu">
-            <ul className="nav-list">
-              <li>
+            <ul className="space-y-4">
+              <motion.li whileHover={{ x: 10 }}>
                 <a href="#home">Home</a>
-              </li>
-              <li>
+              </motion.li>
+              <motion.li whileHover={{ x: 10 }}>
                 <a href="#about">About</a>
-              </li>
-              <li>
+              </motion.li>
+              <motion.li whileHover={{ x: 10 }}>
                 <a href="#service">Service</a>
-              </li>
-              <li>
+              </motion.li>
+              <motion.li whileHover={{ x: 10 }}>
                 <a href="#experience">Experience</a>
-              </li>
-              <li>
+              </motion.li>
+              <motion.li whileHover={{ x: 10 }}>
                 <a href="#portfolio">Portfolio</a>
-              </li>
-              <li>
+              </motion.li>
+              <motion.li whileHover={{ x: 10 }}>
                 <a href="#contact">Contact</a>
-              </li>
+              </motion.li>
             </ul>
           </nav>
 
-          <div className="header-icons">
-            <a
+          <div className="header-icons flex space-x-4 mt-8">
+            <motion.a
+              whileHover={{ scale: 1.2, rotate: 360 }}
               href="https://twitter.com/remyOreo_"
               target="_blank"
               rel="noreferrer"
+              className="text-white hover:text-secondary transition-colors duration-300"
             >
-              <FaXTwitter className="logo" />
-            </a>
-            <a
+              <FaXTwitter className="text-xl" />
+            </motion.a>
+            <motion.a
+              whileHover={{ scale: 1.2, rotate: 360 }}
               href="https://www.linkedin.com/in/remy-adedeji"
               target="_blank"
               rel="noreferrer"
+              className="text-white hover:text-secondary transition-colors duration-300"
             >
-              <FiLinkedin className="logo" />
-            </a>
-            <a
+              <FiLinkedin className="text-xl" />
+            </motion.a>
+            <motion.a
+              whileHover={{ scale: 1.2, rotate: 360 }}
               href="https://github.com/Oreolion"
               target="_blank"
               rel="noreferrer"
+              className="text-white hover:text-secondary transition-colors duration-300"
             >
-              <FiGithub className="logo" />
-            </a>
-            <a href="#">
-              <FiFacebook className="logo" />
-            </a>
-            <a href="#">
-              <BsInstagram className="logo" />
-            </a>
+              <FiGithub className="text-xl" />
+            </motion.a>
+            <motion.a
+              whileHover={{ scale: 1.2, rotate: 360 }}
+              href="#"
+              className="text-white hover:text-secondary transition-colors duration-300"
+            >
+              <FiFacebook className="text-xl" />
+            </motion.a>
+            <motion.a
+              whileHover={{ scale: 1.2, rotate: 360 }}
+              href="#"
+              className="text-white hover:text-secondary transition-colors duration-300"
+            >
+              <BsInstagram className="text-xl" />
+            </motion.a>
           </div>
-          <div>
-            {!closeBtn ? (
-              <button
-                onClick={handleMenuBtn}
-                className={`${closeBtn ? "close-btn" : "onclose-btn "}`}
-              >
-                {closeBtn ? "<" : ">"}
-              </button>
-            ) : (
-              <>
-                <div className="oncloseblock"></div>
-                <button
-                  onClick={handleMenuBtn}
-                  className={` ${closeBtn ? "close-btn" : "onclose-btn"}`}
-                >
-                  &lt;
-                </button>
-              </>
-            )}
-          </div>
-        </header>
+
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            onClick={handleMenuBtn}
+            className={`absolute top-1/2 -right-12 bg-white text-primary p-3 rounded-r-xl shadow-lg transition-all duration-300 hidden md:block ${
+              closeBtn ? "rotate-180" : ""
+            }`}
+          >
+            {closeBtn ? ">" : "<"}
+          </motion.button>
+        </motion.header>
       )}
     </>
   );
