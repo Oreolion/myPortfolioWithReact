@@ -14,9 +14,17 @@ export default {
       fontFamily: {
         ubuntu: ['Ubuntu', 'sans-serif'],
       },
+      spacing: {
+        '18': '4.5rem',
+        '22': '5.5rem',
+      },
+      boxShadow: {
+        'custom': '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+      },
       animation: {
         'slide-in': 'slideIn 0.5s ease-out',
         'fade-in': 'fadeIn 0.5s ease-out',
+        'bounce-slow': 'bounce 3s infinite',
       },
       keyframes: {
         slideIn: {
@@ -24,8 +32,8 @@ export default {
           '100%': { transform: 'translateX(0)' },
         },
         fadeIn: {
-          '0%': { opacity: '0' },
-          '100%': { opacity: '1' },
+          '0%': { opacity: '0', transform: 'translateY(10px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
         },
       },
     },
