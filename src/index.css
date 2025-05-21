@@ -10,7 +10,7 @@
   }
 
   body {
-    @apply bg-background text-gray-700 antialiased;
+    @apply bg-background text-gray-700 antialiased overflow-x-hidden;
   }
 
   section {
@@ -32,29 +32,116 @@
 
   .header {
     @apply fixed top-0 left-0 h-screen bg-gray-800 text-white transition-all duration-300
-           w-64 flex flex-col items-center py-8 px-6 z-50
-           md:translate-x-0 transform;
+           w-64 flex flex-col items-center py-8 px-6 z-50 shadow-2xl;
   }
 
-  .header.collapsed {
-    @apply -translate-x-full md:translate-x-0 md:w-20;
+  .header-logo {
+    @apply mb-8;
+  }
+
+  .header-logo h2 {
+    @apply text-3xl font-bold text-primary;
   }
 
   .nav-menu {
     @apply w-full mt-8;
   }
 
-  .nav-menu a {
+  .nav-list {
+    @apply space-y-4;
+  }
+
+  .nav-list a {
     @apply block py-3 px-4 rounded-lg transition-all duration-300
            hover:bg-primary hover:text-white transform hover:translate-x-2;
   }
 
-  .section-title {
-    @apply text-3xl md:text-4xl lg:text-5xl font-bold mb-12 text-center;
+  .header-icons {
+    @apply flex justify-center gap-4 mt-auto mb-8;
   }
 
-  .section-title span {
-    @apply text-primary;
+  .header-icons a {
+    @apply text-gray-300 hover:text-primary transition-colors duration-300;
+  }
+
+  .logo {
+    @apply text-2xl hover:scale-125 transition-transform duration-300;
+  }
+
+  /* Skills Section */
+  .skill__section {
+    @apply mt-16;
+  }
+
+  .skillsbox {
+    @apply mb-12 text-center;
+  }
+
+  .skillsbox h1 {
+    @apply text-4xl font-bold mb-8;
+  }
+
+  .logos__container {
+    @apply grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-8
+           place-items-center bg-white rounded-xl p-8 shadow-lg;
+  }
+
+  .logos__container svg,
+  .logos__container img {
+    @apply w-12 h-12 transition-transform duration-300 hover:scale-125;
+  }
+
+  .box-container {
+    @apply grid grid-cols-2 md:grid-cols-4 gap-6 mt-12;
+  }
+
+  .box-container .box {
+    @apply bg-white p-6 rounded-xl shadow-lg text-center
+           transform hover:scale-105 transition-transform duration-300;
+  }
+
+  .box-container .box h2 {
+    @apply text-2xl font-bold text-primary mb-2;
+  }
+
+  .box-container .box p {
+    @apply text-gray-600;
+  }
+
+  /* Mobile Menu Button */
+  #menu-bar {
+    @apply fixed right-4 top-4 text-3xl bg-primary text-white p-2 rounded-lg 
+           cursor-pointer z-50 transition-all duration-300 hover:bg-gray-800
+           md:hidden shadow-lg;
+  }
+
+  /* Responsive Layout */
+  .containercontent {
+    @apply ml-0 md:ml-64 transition-all duration-300;
+  }
+
+  .containercontent.expanded {
+    @apply ml-0 md:ml-64;
+  }
+
+  @screen md {
+    .header {
+      @apply transform translate-x-0;
+    }
+
+    .header.active {
+      @apply translate-x-0;
+    }
+  }
+
+  @screen sm {
+    .header {
+      @apply transform -translate-x-full;
+    }
+
+    .header.active {
+      @apply translate-x-0;
+    }
   }
 
   /* Homepage */
@@ -117,42 +204,13 @@
     @apply w-full border-b-2 border-gray-300 py-3 px-4 
            focus:border-primary focus:outline-none transition-colors duration-300;
   }
-}
 
-/* Custom Animations */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.animate-fade-in {
-  animation: fadeIn 0.6s ease-out forwards;
-}
-
-/* Mobile Menu */
-#menu-bar {
-  @apply fixed right-4 top-4 text-3xl bg-primary text-white p-2 rounded-lg 
-         cursor-pointer z-50 transition-all duration-300 hover:bg-gray-800
-         md:hidden;
-}
-
-/* Responsive Design */
-@screen md {
-  .containercontent {
-    @apply ml-64 transition-all duration-300;
+  /* Section Headings */
+  section h1 {
+    @apply text-4xl font-bold text-center mb-12;
   }
 
-  .containercontent.expanded {
-    @apply ml-20;
-  }
-}
-
-@screen sm {
-  .header {
-    @apply transform -translate-x-full;
-  }
-
-  .header.active {
-    @apply translate-x-0;
+  section h1 span {
+    @apply text-primary;
   }
 }

@@ -29,11 +29,13 @@ const Header = ({ menu, setMenu }) => {
 
   return (
     <>
-      {!menu && !isToggle ? (
-        <CgMenuGridO id="menu-bar" onClick={handleMenuBtn} />
-      ) : (
-        <IoMdCloseCircle id="menu-bar" onClick={handleMenuBtn} />
-      )}
+      <div className="fixed top-4 right-4 z-50">
+        {!menu && !isToggle ? (
+          <CgMenuGridO className="text-4xl cursor-pointer" id="menu-bar" onClick={handleMenuBtn} />
+        ) : (
+          <IoMdCloseCircle className="text-4xl cursor-pointer" id="menu-bar" onClick={handleMenuBtn} />
+        )}
+      </div>
 
       {header && (
         <header
@@ -46,7 +48,6 @@ const Header = ({ menu, setMenu }) => {
         >
           <div className="header-logo">
             <h2 className="ra">RA</h2>
-            {/* <h3 className="ra"> RA</h3> */}
           </div>
 
           <nav className="nav-menu">
@@ -100,26 +101,6 @@ const Header = ({ menu, setMenu }) => {
             <a href="#">
               <BsInstagram className="logo" />
             </a>
-          </div>
-          <div>
-            {!closeBtn ? (
-              <button
-                onClick={handleMenuBtn}
-                className={`${closeBtn ? "close-btn" : "onclose-btn "}`}
-              >
-                {closeBtn ? "<" : ">"}
-              </button>
-            ) : (
-              <>
-                <div className="oncloseblock"></div>
-                <button
-                  onClick={handleMenuBtn}
-                  className={` ${closeBtn ? "close-btn" : "onclose-btn"}`}
-                >
-                  &lt;
-                </button>
-              </>
-            )}
           </div>
         </header>
       )}
