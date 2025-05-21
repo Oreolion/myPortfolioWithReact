@@ -60,61 +60,65 @@ const About = () => {
     <>
       <section className="about-me" id="about">
         <h1 className="" ref={myref}>
-          <span> ABOUT </span> ME{" "}
+          <span>ABOUT</span> ME
         </h1>
         <div className="inner-about-me">
           <div className="row1">
-            <img src={picture} alt="my-pic" />
+            <img src={picture} alt="my-pic" className="rounded-2xl shadow-xl" />
           </div>
           <div className="row2">
-            <h2>My Name is RA & i am a front-end developer</h2>
+            <h2 className="text-2xl font-bold mb-6">My Name is RA & I am a Front-end Developer</h2>
 
-            <div className="inner-row-container">
-              <div className="inner-row">
-                <p>
-                  <span>Age:</span> 26
-                </p>
-                <p>
-                  <span>Gender:</span> Male
-                </p>
-                <p>
-                  <span>Language:</span> Yoruba, English
-                </p>
-                <p>
-                  <span>Role:</span> Full-Stack Developer
-                </p>
-                <p>
-                  <span>Hobbies:</span> Reading, travelling, coding, music art,
-                  documentaries, history, research, podcasts
-                </p>
-              </div>
-              <div className="inner-row1">
-                <p>
-                  <span>Freelance:</span> Available
-                </p>
-                <p>
-                  <span>Whatsapp:</span> +2348102871625
-                </p>
-                <p>
-                  <span>Email:</span> Remyoreo11@gmail.com
-                </p>
-                <p>
-                  <span>Country:</span> Nigeria
-                </p>
+            <div className="inner-row-container bg-white rounded-xl p-6 shadow-lg">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="space-y-4">
+                  <p>
+                    <span className="font-bold text-primary">Age:</span> 26
+                  </p>
+                  <p>
+                    <span className="font-bold text-primary">Gender:</span> Male
+                  </p>
+                  <p>
+                    <span className="font-bold text-primary">Language:</span> Yoruba, English
+                  </p>
+                  <p>
+                    <span className="font-bold text-primary">Role:</span> Full-Stack Developer
+                  </p>
+                  <p>
+                    <span className="font-bold text-primary">Hobbies:</span> Reading, travelling, coding, music art,
+                    documentaries, history, research, podcasts
+                  </p>
+                </div>
+                <div className="space-y-4">
+                  <p>
+                    <span className="font-bold text-primary">Freelance:</span> Available
+                  </p>
+                  <p>
+                    <span className="font-bold text-primary">Whatsapp:</span> +2348102871625
+                  </p>
+                  <p>
+                    <span className="font-bold text-primary">Email:</span> Remyoreo11@gmail.com
+                  </p>
+                  <p>
+                    <span className="font-bold text-primary">Country:</span> Nigeria
+                  </p>
+                </div>
               </div>
             </div>
-            <a href="#" className="btn" style={{ marginRight: 10 }}>
-              Download CV
-            </a>
-            <a href="#contact" className="btn">
-              Hire Me
-            </a>
+            <div className="mt-8 space-x-4">
+              <a href="#" className="btn">
+                Download CV
+              </a>
+              <a href="#contact" className="btn">
+                Hire Me
+              </a>
+            </div>
           </div>
         </div>
         <div className="skill__section">
           <div className="skillsbox">
             <h1 ref={ref}>
-              <span> MY </span> SKILLS
+              <span>MY</span> SKILLS
             </h1>
           </div>
 
@@ -498,7 +502,7 @@ const About = () => {
               </div>
               <div className="box">
                 <h2>&gt;&gt;50+</h2>
-                <p>projects completed</p>
+                <p>Projects completed</p>
               </div>
               <div className="box">
                 <h2>&gt;&gt;5+</h2>
