@@ -20,30 +20,24 @@ const Header = ({ menu, setMenu }) => {
     setMenu(!menu);
   };
 
-  window.onscroll = () => {
-    myRef.current.classList.remove("active");
-    setMenu(false);
-    setCloseBtn(false);
-    setIsToggle(false);
-  };
-
   return (
     <>
       <div className="fixed top-4 right-4 z-50">
-        {!menu && !isToggle ? (
-          <CgMenuGridO className="text-4xl cursor-pointer" id="menu-bar" onClick={handleMenuBtn} />
-        ) : (
-          <IoMdCloseCircle className="text-4xl cursor-pointer" id="menu-bar" onClick={handleMenuBtn} />
-        )}
+        <button 
+          className="bg-primary hover:bg-gray-800 text-white p-3 rounded-lg shadow-lg transition-all duration-300 transform hover:scale-110"
+          onClick={handleMenuBtn}
+        >
+          {!menu && !isToggle ? (
+            <CgMenuGridO className="text-3xl" />
+          ) : (
+            <IoMdCloseCircle className="text-3xl" />
+          )}
+        </button>
       </div>
 
       {header && (
         <header
-          className={
-            isToggle
-              ? "header active"
-              : `header ${closeBtn} ? " collapsebtn " : "" `
-          }
+          className={`header ${isToggle ? "" : "active"} ${closeBtn ? "" : "collapsebtn"}`}
           ref={myRef}
         >
           <div className="header-logo">
@@ -53,22 +47,22 @@ const Header = ({ menu, setMenu }) => {
           <nav className="nav-menu">
             <ul className="nav-list">
               <li>
-                <a href="#home">Home</a>
+                <a href="#home" onClick={handleMenuBtn}>Home</a>
               </li>
               <li>
-                <a href="#about">About</a>
+                <a href="#about" onClick={handleMenuBtn}>About</a>
               </li>
               <li>
-                <a href="#service">Service</a>
+                <a href="#service" onClick={handleMenuBtn}>Service</a>
               </li>
               <li>
-                <a href="#experience">Experience</a>
+                <a href="#experience" onClick={handleMenuBtn}>Experience</a>
               </li>
               <li>
-                <a href="#portfolio">Portfolio</a>
+                <a href="#portfolio" onClick={handleMenuBtn}>Portfolio</a>
               </li>
               <li>
-                <a href="#contact">Contact</a>
+                <a href="#contact" onClick={handleMenuBtn}>Contact</a>
               </li>
             </ul>
           </nav>
@@ -78,6 +72,7 @@ const Header = ({ menu, setMenu }) => {
               href="https://twitter.com/remyOreo_"
               target="_blank"
               rel="noreferrer"
+              className="hover:text-primary transition-colors duration-300"
             >
               <FaXTwitter className="logo" />
             </a>
@@ -85,6 +80,7 @@ const Header = ({ menu, setMenu }) => {
               href="https://www.linkedin.com/in/remy-adedeji"
               target="_blank"
               rel="noreferrer"
+              className="hover:text-primary transition-colors duration-300"
             >
               <FiLinkedin className="logo" />
             </a>
@@ -92,13 +88,14 @@ const Header = ({ menu, setMenu }) => {
               href="https://github.com/Oreolion"
               target="_blank"
               rel="noreferrer"
+              className="hover:text-primary transition-colors duration-300"
             >
               <FiGithub className="logo" />
             </a>
-            <a href="#">
+            <a href="#" className="hover:text-primary transition-colors duration-300">
               <FiFacebook className="logo" />
             </a>
-            <a href="#">
+            <a href="#" className="hover:text-primary transition-colors duration-300">
               <BsInstagram className="logo" />
             </a>
           </div>

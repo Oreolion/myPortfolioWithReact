@@ -10,7 +10,7 @@
   }
 
   body {
-    @apply bg-background text-gray-700 antialiased overflow-x-hidden;
+    @apply bg-background text-gray-700 antialiased overflow-x-hidden font-ubuntu;
   }
 
   section {
@@ -24,7 +24,7 @@
   }
 
   .btn {
-    @apply inline-block bg-primary text-white font-semibold py-3 px-6 rounded-lg 
+    @apply inline-flex items-center bg-primary text-white font-semibold py-3 px-6 rounded-lg 
            transition-all duration-300 hover:bg-gray-800 hover:tracking-wider 
            transform hover:scale-105 focus:outline-none focus:ring-2 
            focus:ring-primary focus:ring-opacity-50;
@@ -32,7 +32,11 @@
 
   .header {
     @apply fixed top-0 left-0 h-screen bg-gray-800 text-white transition-all duration-300
-           w-64 flex flex-col items-center py-8 px-6 z-50 shadow-2xl;
+           w-64 flex flex-col items-center py-8 px-6 z-40 shadow-2xl transform -translate-x-full md:translate-x-0;
+  }
+
+  .header.active {
+    @apply translate-x-0;
   }
 
   .header-logo {
@@ -60,157 +64,54 @@
     @apply flex justify-center gap-4 mt-auto mb-8;
   }
 
-  .header-icons a {
-    @apply text-gray-300 hover:text-primary transition-colors duration-300;
-  }
-
   .logo {
     @apply text-2xl hover:scale-125 transition-transform duration-300;
   }
 
-  /* Skills Section */
-  .skill__section {
-    @apply mt-16;
-  }
-
-  .skillsbox {
-    @apply mb-12 text-center;
-  }
-
-  .skillsbox h1 {
-    @apply text-4xl font-bold mb-8;
-  }
-
-  .logos__container {
-    @apply grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-8
-           place-items-center bg-white rounded-xl p-8 shadow-lg;
-  }
-
-  .logos__container svg,
-  .logos__container img {
-    @apply w-12 h-12 transition-transform duration-300 hover:scale-125;
-  }
-
-  .box-container {
-    @apply grid grid-cols-2 md:grid-cols-4 gap-6 mt-12;
-  }
-
-  .box-container .box {
-    @apply bg-white p-6 rounded-xl shadow-lg text-center
-           transform hover:scale-105 transition-transform duration-300;
-  }
-
-  .box-container .box h2 {
-    @apply text-2xl font-bold text-primary mb-2;
-  }
-
-  .box-container .box p {
-    @apply text-gray-600;
-  }
-
-  /* Mobile Menu Button */
-  #menu-bar {
-    @apply fixed right-4 top-4 text-3xl bg-primary text-white p-2 rounded-lg 
-           cursor-pointer z-50 transition-all duration-300 hover:bg-gray-800
-           md:hidden shadow-lg;
-  }
-
-  /* Responsive Layout */
   .containercontent {
     @apply ml-0 md:ml-64 transition-all duration-300;
   }
 
-  .containercontent.expanded {
-    @apply ml-0 md:ml-64;
-  }
-
-  @screen md {
-    .header {
-      @apply transform translate-x-0;
-    }
-
-    .header.active {
-      @apply translate-x-0;
-    }
-  }
-
-  @screen sm {
-    .header {
-      @apply transform -translate-x-full;
-    }
-
-    .header.active {
-      @apply translate-x-0;
-    }
-  }
-
-  /* Homepage */
   .homepage {
     @apply flex flex-col md:flex-row items-center justify-between gap-12 
-           min-h-screen pt-20 md:pt-0;
+           min-h-screen pt-20 md:pt-0 px-4 md:px-8 lg:px-16;
   }
 
   .homepage .content {
-    @apply w-full md:w-1/2;
+    @apply w-full md:w-1/2 space-y-6;
   }
 
   .homepage .image-container {
     @apply w-full md:w-1/2 flex justify-center items-center;
   }
 
-  .homepage .image-container img {
-    @apply max-w-full h-auto rounded-2xl shadow-xl 
-           transform hover:scale-105 transition-transform duration-300;
-  }
-
-  /* About Section */
-  .about-me {
-    @apply py-20;
-  }
-
-  .inner-about-me {
-    @apply grid md:grid-cols-2 gap-12 items-center;
-  }
-
-  /* Services Section */
-  .servicebox-container {
-    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8;
-  }
-
-  .servicebox-container .box {
+  .experiences .experiencebox {
     @apply bg-white rounded-xl p-6 shadow-lg transition-all duration-300
            hover:transform hover:scale-105 hover:shadow-xl;
   }
 
-  /* Portfolio Section */
-  .inner-portfolio {
-    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8;
+  .contact-me .box {
+    @apply bg-white rounded-xl p-6 shadow-lg text-center
+           transform hover:scale-105 transition-all duration-300;
   }
 
-  .portfolio .box {
-    @apply relative overflow-hidden rounded-xl shadow-lg;
+  .contact-me form input,
+  .contact-me form textarea {
+    @apply w-full border-2 border-gray-300 rounded-lg p-3
+           focus:border-primary focus:ring-2 focus:ring-primary focus:outline-none
+           transition-colors duration-300;
   }
+}
 
-  .portfolio .box img {
-    @apply w-full h-64 object-cover transition-all duration-300;
-  }
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  @apply w-2;
+}
 
-  /* Contact Section */
-  .inner-contact {
-    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8;
-  }
+::-webkit-scrollbar-track {
+  @apply bg-gray-100;
+}
 
-  .contact-input {
-    @apply w-full border-b-2 border-gray-300 py-3 px-4 
-           focus:border-primary focus:outline-none transition-colors duration-300;
-  }
-
-  /* Section Headings */
-  section h1 {
-    @apply text-4xl font-bold text-center mb-12;
-  }
-
-  section h1 span {
-    @apply text-primary;
-  }
+::-webkit-scrollbar-thumb {
+  @apply bg-primary rounded-full;
 }

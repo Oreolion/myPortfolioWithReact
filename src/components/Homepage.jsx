@@ -5,14 +5,16 @@ import { useState } from "react";
 
 const Homepage = () => {
   const [textColor, setTextColor] = useState("");
+  
   return (
-    <>
-      <section id="home" className="homepage">
-        <div className="content">
-          <h5>Hello World...</h5>
-          <h1>
+    <section id="home" className="homepage">
+      <div className="content">
+        <div className="animate__animated animate__fadeInLeft">
+          <h5 className="text-xl text-primary mb-4">Hello World...</h5>
+          <h1 className="text-5xl font-bold mb-6">
             I AM <br />
             <div
+              className="inline-block"
               style={{
                 backgroundColor: textColor,
               }}
@@ -22,35 +24,29 @@ const Homepage = () => {
                   "",
                   1000,
                   () => setTextColor("rgb(77, 109, 24)"),
-
                   "REMY ADEDEJI (RA)",
                   2000,
                 ]}
-                className="typed__format"
+                className="typed__format text-4xl md:text-5xl font-bold text-primary"
                 speed={10}
                 repeat={2}
               />
             </div>
           </h1>
-          <h3 className="">
+          <h3 className="text-2xl md:text-3xl mb-6">
             <TypeAnimation
               preRenderFirstString={true}
               sequence={[
                 500,
                 "I am a Full-Stack developer",
-
                 1000,
                 "I am an AI Powered Apps developer",
-
                 1000,
                 "I am a NextJs developer",
-
                 1000,
                 "I am a Nuxt developer",
-
                 1000,
                 "I am a React developer",
-
                 1000,
                 "I am a Vue developer",
                 1000,
@@ -58,27 +54,34 @@ const Homepage = () => {
                 500,
               ]}
               speed={30}
-              style={{ fontSize: "1.5rem" }}
+              className="text-gray-700"
               repeat={Infinity}
             />
           </h3>
-          <p className="homepage__text">
+          <p className="text-lg leading-relaxed mb-8 max-w-2xl">
             I&apos;m a Full-Stack Engineer 👨🏼‍💻, a JavaScript Lover❤️ and AI
-            Enthusiast who love to build AI Powered Apps, I am passionate about
+            Enthusiast who love to build AI Powered Apps. I am passionate about
             crafting digital solutions with a strong emphasis on design,
             usability and accessibility. I enjoy creating apps and web
             experiences that involve meaningful interaction with the user.
           </p>
-          <a href="#about" className="btn">
-            {" "}
-            About Me{" "}
+          <a href="#about" className="btn inline-flex items-center gap-2 text-lg">
+            About Me
+            <span className="animate-bounce">→</span>
           </a>
         </div>
-        <div className="image-container">
-          <img src={picture} alt="my-pic" />
+      </div>
+      <div className="image-container animate__animated animate__fadeInRight">
+        <div className="relative">
+          <div className="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-full blur opacity-30"></div>
+          <img 
+            src={picture} 
+            alt="my-pic" 
+            className="relative rounded-full shadow-2xl border-4 border-white"
+          />
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 };
 
