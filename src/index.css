@@ -26,55 +26,6 @@
            focus:ring-primary focus:ring-opacity-50;
   }
 
-  /* Sidebar styles */
-  .sidebar {
-    @apply fixed top-0 left-0 h-screen bg-gray-800 text-white transition-all duration-300 z-40;
-  }
-
-  .sidebar-open {
-    @apply w-64 translate-x-0;
-  }
-
-  .sidebar-closed {
-    @apply w-0 -translate-x-full;
-  }
-
-  /* Main content styles */
-  .main-content {
-    @apply transition-all duration-300;
-  }
-
-  .main-content-shifted {
-    @apply md:ml-64;
-  }
-
-  /* Section styles */
-  .section-container {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
-  }
-
-  .section-title {
-    @apply text-4xl md:text-5xl font-bold text-center mb-16;
-  }
-
-  .section-title span {
-    @apply text-primary;
-  }
-
-  /* Grid layouts */
-  .grid-layout {
-    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8;
-  }
-
-  .grid-layout-4 {
-    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8;
-  }
-
-  /* Card styles */
-  .card {
-    @apply bg-white rounded-xl p-8 shadow-lg transform hover:scale-105 transition-all duration-300;
-  }
-
   /* Custom cursors */
   .cursor-1, .cursor-2 {
     @apply fixed pointer-events-none z-50 rounded-full mix-blend-difference;
@@ -92,6 +43,43 @@
   .up-arrow {
     @apply fixed bottom-8 right-8 text-4xl text-primary cursor-pointer 
            transition-all duration-300 hover:scale-125 z-50;
+  }
+
+  /* Portfolio section */
+  .portfolio {
+    @apply py-20;
+  }
+
+  .portfolio h1 {
+    @apply text-4xl font-bold text-center mb-16;
+  }
+
+  .portfolio h1 span {
+    @apply text-primary;
+  }
+
+  .inner-portfolio {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto;
+  }
+
+  .portfolio .box {
+    @apply bg-white rounded-xl overflow-hidden shadow-lg transform hover:scale-105 transition-all duration-300;
+  }
+
+  .portfolio .box img {
+    @apply w-full h-48 object-cover;
+  }
+
+  .portfolio .box .icon-box {
+    @apply flex justify-center gap-4 p-4;
+  }
+
+  .portfolio .box h6 {
+    @apply text-center font-semibold p-4;
+  }
+
+  .portfolio .link {
+    @apply flex items-center justify-center gap-4 mt-8 text-primary hover:text-gray-800 transition-colors duration-300;
   }
 }
 

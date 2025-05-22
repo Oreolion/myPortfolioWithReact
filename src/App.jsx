@@ -13,7 +13,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 function App() {
-  const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [cursor1Style, setCursor1Style] = useState({
     top: 0,
@@ -94,7 +94,7 @@ function App() {
         setMobileMenuOpen={setMobileMenuOpen}
       />
       
-      <main className={`flex-1 transition-all duration-300 ${sidebarOpen ? 'md:ml-64' : 'ml-0'}`}>
+      <main className={`flex-1 transition-all duration-300 ${sidebarOpen || mobileMenuOpen ? 'md:ml-64' : 'ml-0'}`}>
         <div className="relative">
           <div style={cursor1Style} className="cursor-1" />
           <div style={cursor2Style} className="cursor-2" />

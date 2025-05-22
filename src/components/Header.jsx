@@ -9,6 +9,13 @@ const Header = ({ sidebarOpen, setSidebarOpen, mobileMenuOpen, setMobileMenuOpen
   const toggleSidebar = () => setSidebarOpen(!sidebarOpen);
   const toggleMobileMenu = () => setMobileMenuOpen(!mobileMenuOpen);
 
+  const closeMenus = () => {
+    setMobileMenuOpen(false);
+    if (window.innerWidth < 768) {
+      setSidebarOpen(false);
+    }
+  };
+
   return (
     <>
       {/* Mobile Menu Toggle */}
@@ -35,53 +42,54 @@ const Header = ({ sidebarOpen, setSidebarOpen, mobileMenuOpen, setMobileMenuOpen
         )}
       </button>
 
-      {/* Sidebar */}
-      <aside className={`fixed top-0 left-0 h-screen bg-gray-800 text-white transition-all duration-300 
-        ${sidebarOpen ? 'w-64 translate-x-0' : 'w-0 -translate-x-full'} 
-        ${mobileMenuOpen ? 'translate-x-0' : ''} 
-        md:translate-x-0 z-40`}
+      {/* Sidebar/Mobile Menu */}
+      <aside 
+        className={`fixed top-0 left-0 h-screen bg-gray-800 text-white transition-all duration-300 z-40
+          ${(sidebarOpen || mobileMenuOpen) ? 'w-64 translate-x-0' : 'w-0 -translate-x-full'}`}
       >
-        <div className="flex flex-col h-full p-6">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-primary">RA</h2>
-          </div>
+        {(sidebarOpen || mobileMenuOpen) && (
+          <div className="flex flex-col h-full p-6">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl font-bold text-primary">RA</h2>
+            </div>
 
-          <nav className="flex-1">
-            <ul className="space-y-4">
-              {['home', 'about', 'service', 'experience', 'portfolio', 'contact'].map((item) => (
-                <li key={item}>
-                  <a
-                    href={`#${item}`}
-                    className="block py-3 px-4 rounded-lg transition-all duration-300 hover:bg-primary hover:text-white transform hover:translate-x-2"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    {item.charAt(0).toUpperCase() + item.slice(1)}
-                  </a>
-                </li>
+            <nav className="flex-1">
+              <ul className="space-y-4">
+                {['home', 'about', 'service', 'experience', 'portfolio', 'contact'].map((item) => (
+                  <li key={item}>
+                    <a
+                      href={`#${item}`}
+                      className="block py-3 px-4 rounded-lg transition-all duration-300 hover:bg-primary hover:text-white transform hover:translate-x-2"
+                      onClick={closeMenus}
+                    >
+                      {item.charAt(0).toUpperCase() + item.slice(1)}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+
+            <div className="flex justify-center gap-4 mt-auto">
+              {[
+                { icon: FaXTwitter, href: "https://twitter.com/remyOreo_" },
+                { icon: FiLinkedin, href: "https://www.linkedin.com/in/remy-adedeji" },
+                { icon: FiGithub, href: "https://github.com/Oreolion" },
+                { icon: FiFacebook, href: "#" },
+                { icon: BsInstagram, href: "#" }
+              ].map((social, index) => (
+                <a
+                  key={index}
+                  href={social.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-2xl hover:text-primary transition-all duration-300 hover:scale-125"
+                >
+                  <social.icon />
+                </a>
               ))}
-            </ul>
-          </nav>
-
-          <div className="flex justify-center gap-4 mt-auto">
-            {[
-              { icon: FaXTwitter, href: "https://twitter.com/remyOreo_" },
-              { icon: FiLinkedin, href: "https://www.linkedin.com/in/remy-adedeji" },
-              { icon: FiGithub, href: "https://github.com/Oreolion" },
-              { icon: FiFacebook, href: "#" },
-              { icon: BsInstagram, href: "#" }
-            ].map((social, index) => (
-              <a
-                key={index}
-                href={social.href}
-                target="_blank"
-                rel="noreferrer"
-                className="text-2xl hover:text-primary transition-all duration-300 hover:scale-125"
-              >
-                <social.icon />
-              </a>
-            ))}
+            </div>
           </div>
-        </div>
+        )}
       </aside>
     </>
   );
