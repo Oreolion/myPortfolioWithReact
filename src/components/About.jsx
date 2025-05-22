@@ -75,7 +75,7 @@ const About = () => {
           </div>
           <div className="row2 md:w-1/2 lg:w-2/3 md:pl-8">
             <h2 className="text-2xl font-bold mb-6 text-center md:text-left">
-              My Name is RA & I am a Front-end Developer
+              My Name is RA & I am a Full stack Blockchain & AI Powered Apps Developer
             </h2>
 
             <div className="inner-row-container bg-white rounded-xl p-6 shadow-lg">
@@ -140,7 +140,6 @@ const About = () => {
 
           <div className="about-skills">
             <div className="logos__container bg-white p-4 rounded flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-10">
-              {/* All your SVG icons and img tags go here */}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 x="0px"
