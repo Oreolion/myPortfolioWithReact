@@ -30,28 +30,33 @@ const Experiences = () => {
     );
   }, []);
 
-  const experiences = [
+const experiences = [
     {
-      period: "2020 - 2021",
-      title: "Front-End Development",
-      description: "Building personal projects, Freelancing, improving my skills by learning frameworks and new technologies and building different web Experiences to solve real world problems."
+        period: "2020 - 2021",
+        title: "Front-End Development",
+        description: "Focused on mastering HTML, CSS, and JavaScript. Built several static websites and learned responsive design principles while working on personal and freelance projects."
     },
     {
-      period: "2021 - 2022",
-      title: "Front-End Development",
-      description: "Building personal projects, Freelancing, improving my skills by learning frameworks and new technologies and building different web Experiences to solve real world problems."
+        period: "2021 - 2022",
+        title: "Front-End Development",
+        description: "Advanced my skills by learning React and modern JavaScript frameworks. Collaborated with clients to deliver interactive web applications and improved UI/UX design abilities."
     },
     {
-      period: "2022 - 2023",
-      title: "Front-End Development",
-      description: "Building personal projects, Freelancing, improving my skills by learning frameworks and new technologies and building different web Experiences to solve real world problems."
+        period: "2022 - 2023",
+        title: "Front-End Development",
+        description: "Worked on larger scale projects using React and Redux. Integrated APIs, optimized performance, and contributed to open-source projects to further enhance my expertise."
     },
     {
-      period: "2024",
-      title: "Full-Stack Development",
-      description: "Building personal projects, Freelancing, improving my skills by learning frameworks and new technologies and building different web Experiences to solve real world problems."
+        period: "2024 - 2025",
+        title: "Full-Stack Development",
+        description: "Transitioned to full-stack development by learning Node.js, Express, and MongoDB. Built end-to-end applications, managed databases, and deployed projects to the cloud."
+    },
+    {
+        period: "2025",
+        title: "Full-Stack Blockchain Development, AI powered Apps",
+        description: "Explored blockchain technologies and smart contract development. Started building AI-powered applications, integrating machine learning APIs, and leveraging decentralized platforms."
     }
-  ];
+];
 
   return (
     <section className="experiences" id="experience">

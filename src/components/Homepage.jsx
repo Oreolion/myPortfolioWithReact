@@ -10,13 +10,13 @@ const Homepage = () => {
     <section id="home" className="flex min-h-screen items-center justify-between px-4 md:px-8 lg:px-16">
       <div className="flex flex-col md:flex-row items-center justify-between w-full gap-12">
         <div className="w-full md:w-1/2 animate__animated animate__fadeInLeft">
-          <h5 className="text-xl text-primary mb-4">Hello World...</h5>
+          {/* <h5 className="text-xl text-primary mb-4">Hello World...</h5> */}
           <h1 className="text-5xl font-bold mb-6">
             I AM <br />
             <div
               className="inline-block"
               style={{
-                backgroundColor: textColor,
+                // backgroundColor: textColor,
               }}
             >
               <TypeAnimation
@@ -38,7 +38,7 @@ const Homepage = () => {
               preRenderFirstString={true}
               sequence={[
                 500,
-                "I am a Full-Stack developer",
+                "I am a Full-Stack & Blockchain developer",
                 1000,
                 "I am an AI Powered Apps developer",
                 1000,
@@ -59,9 +59,9 @@ const Homepage = () => {
             />
           </h3>
           <p className="text-lg leading-relaxed mb-8 max-w-2xl">
-            I&apos;m a Full-Stack Engineer 👨🏼‍💻, a JavaScript Lover❤️ and AI
-            Enthusiast who love to build AI Powered Apps. I am passionate about
-            crafting digital solutions with a strong emphasis on design,
+            I&apos;m a Full-Stack Engineer 👨🏼‍💻, Blockchain and AI
+            Enthusiast❤️, i love to build AI Powered Apps, Blockchain integrated Apps. I am passionate about
+            crafting digital solutions with a strong emphasis on functionality, design,
             usability and accessibility.
           </p>
           <a href="#about" className="btn inline-flex items-center gap-2 text-lg">

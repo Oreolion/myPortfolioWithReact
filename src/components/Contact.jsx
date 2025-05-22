@@ -62,7 +62,6 @@ const Contact = () => {
               <FiPhoneCall />
             </a>
             <h3 className="text-xl font-semibold mb-4">My WhatsApp</h3>
-            <p className="text-gray-600 mb-2">+2348102871625</p>
             <p className="text-gray-600">+2540745633397</p>
           </div>
 

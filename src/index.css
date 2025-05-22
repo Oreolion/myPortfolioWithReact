@@ -7,6 +7,7 @@
   :root {
     --primary-color: rgb(13, 108, 60);
     --secondary-color: rgb(136, 197, 31);
+    scroll-behavior: smooth;
   }
 
   body {
@@ -15,6 +16,13 @@
 
   section {
     @apply py-20 px-4 md:px-8 lg:px-16 min-h-screen;
+  }
+
+    section h1 {
+    @apply text-4xl font-bold text-center mb-16;
+  }
+    section h1 span {
+    @apply text-primary;
   }
 }
 
@@ -27,16 +35,43 @@
   }
 
   /* Custom cursors */
-  .cursor-1, .cursor-2 {
-    @apply fixed pointer-events-none z-50 rounded-full mix-blend-difference;
+  .cursor-1,
+  .cursor-2 {
+    @apply fixed pointer-events-none bg-primary z-50 rounded-full mix-blend-difference;
   }
 
   .cursor-1 {
-    @apply w-8 h-8 border-2 border-white transition-all duration-200 ease-out;
+    @apply w-10 h-10 border-2 border-white transition-all duration-200 ease-out;
   }
 
   .cursor-2 {
-    @apply w-2 h-2 bg-white transition-all duration-100 ease-out;
+    @apply w-4 h-4 bg-primary transition-all duration-100 ease-out;
+  }
+
+  .about-skills svg {
+    @apply transition-all duration-200 ease-out cursor-pointer;
+  }
+
+  .about-skills svg:hover {
+    animation: svg-bounce 0.6s;
+  }
+
+  @keyframes svg-bounce {
+    0% {
+      transform: translateY(0);
+    }
+    30% {
+      transform: translateY(-10px);
+    }
+    50% {
+      transform: translateY(0);
+    }
+    70% {
+      transform: translateY(-5px);
+    }
+    100% {
+      transform: translateY(0);
+    }
   }
 
   /* Scroll to top button */
@@ -50,9 +85,7 @@
     @apply py-20;
   }
 
-  .portfolio h1 {
-    @apply text-4xl font-bold text-center mb-16;
-  }
+
 
   .portfolio h1 span {
     @apply text-primary;

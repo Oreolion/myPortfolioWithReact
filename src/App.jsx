@@ -9,6 +9,7 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import { PiArrowFatLinesUpFill } from "react-icons/pi";
 import { useEffect } from "react";
+import "../src/index.css"
 import AOS from "aos";
 import "aos/dist/aos.css";
 
