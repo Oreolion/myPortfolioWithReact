@@ -7,9 +7,9 @@ const Homepage = () => {
   const [textColor, setTextColor] = useState("");
   
   return (
-    <section id="home" className="homepage">
-      <div className="content">
-        <div className="animate__animated animate__fadeInLeft">
+    <section id="home" className="flex min-h-screen items-center justify-between px-4 md:px-8 lg:px-16">
+      <div className="flex flex-col md:flex-row items-center justify-between w-full gap-12">
+        <div className="w-full md:w-1/2 animate__animated animate__fadeInLeft">
           <h5 className="text-xl text-primary mb-4">Hello World...</h5>
           <h1 className="text-5xl font-bold mb-6">
             I AM <br />
@@ -62,23 +62,23 @@ const Homepage = () => {
             I&apos;m a Full-Stack Engineer 👨🏼‍💻, a JavaScript Lover❤️ and AI
             Enthusiast who love to build AI Powered Apps. I am passionate about
             crafting digital solutions with a strong emphasis on design,
-            usability and accessibility. I enjoy creating apps and web
-            experiences that involve meaningful interaction with the user.
+            usability and accessibility.
           </p>
           <a href="#about" className="btn inline-flex items-center gap-2 text-lg">
             About Me
             <span className="animate-bounce">→</span>
           </a>
         </div>
-      </div>
-      <div className="image-container animate__animated animate__fadeInRight">
-        <div className="relative">
-          <div className="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-full blur opacity-30"></div>
-          <img 
-            src={picture} 
-            alt="my-pic" 
-            className="relative rounded-full shadow-2xl border-4 border-white"
-          />
+        
+        <div className="w-full md:w-1/2 flex justify-center animate__animated animate__fadeInRight">
+          <div className="relative w-[300px] h-[300px] md:w-[400px] md:h-[400px]">
+            <div className="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-full blur opacity-30"></div>
+            <img 
+              src={picture} 
+              alt="my-pic" 
+              className="relative w-full h-full object-cover rounded-full shadow-2xl border-4 border-white"
+            />
+          </div>
         </div>
       </div>
     </section>

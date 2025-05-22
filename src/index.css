@@ -26,7 +26,56 @@
            focus:ring-primary focus:ring-opacity-50;
   }
 
-  /* Cursor styles */
+  /* Sidebar styles */
+  .sidebar {
+    @apply fixed top-0 left-0 h-screen bg-gray-800 text-white transition-all duration-300 z-40;
+  }
+
+  .sidebar-open {
+    @apply w-64 translate-x-0;
+  }
+
+  .sidebar-closed {
+    @apply w-0 -translate-x-full;
+  }
+
+  /* Main content styles */
+  .main-content {
+    @apply transition-all duration-300;
+  }
+
+  .main-content-shifted {
+    @apply md:ml-64;
+  }
+
+  /* Section styles */
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-title {
+    @apply text-4xl md:text-5xl font-bold text-center mb-16;
+  }
+
+  .section-title span {
+    @apply text-primary;
+  }
+
+  /* Grid layouts */
+  .grid-layout {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8;
+  }
+
+  .grid-layout-4 {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8;
+  }
+
+  /* Card styles */
+  .card {
+    @apply bg-white rounded-xl p-8 shadow-lg transform hover:scale-105 transition-all duration-300;
+  }
+
+  /* Custom cursors */
   .cursor-1, .cursor-2 {
     @apply fixed pointer-events-none z-50 rounded-full mix-blend-difference;
   }
@@ -39,67 +88,10 @@
     @apply w-2 h-2 bg-white transition-all duration-100 ease-out;
   }
 
-  /* Up arrow button */
+  /* Scroll to top button */
   .up-arrow {
     @apply fixed bottom-8 right-8 text-4xl text-primary cursor-pointer 
            transition-all duration-300 hover:scale-125 z-50;
-  }
-
-  /* Section headings */
-  section h1 {
-    @apply text-4xl md:text-5xl font-bold text-center mb-16;
-  }
-
-  section h1 span {
-    @apply text-primary;
-  }
-
-  /* Skills section */
-  .logos__container {
-    @apply grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 
-           place-items-center bg-white p-8 rounded-xl shadow-lg;
-  }
-
-  .logos__container svg,
-  .logos__container img {
-    @apply transition-transform duration-300 hover:scale-125;
-  }
-
-  /* Box container styles */
-  .box-container {
-    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-12;
-  }
-
-  .box-container .box {
-    @apply bg-white p-8 rounded-xl shadow-lg text-center
-           transform hover:scale-105 transition-all duration-300;
-  }
-
-  .box-container .box h2 {
-    @apply text-3xl font-bold text-primary mb-4;
-  }
-
-  /* Portfolio styles */
-  .portfolio .inner-portfolio {
-    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8;
-  }
-
-  .portfolio .box {
-    @apply relative bg-white rounded-xl overflow-hidden shadow-lg
-           transform hover:scale-105 transition-all duration-300;
-  }
-
-  .portfolio .box img {
-    @apply w-full h-64 object-cover;
-  }
-
-  .portfolio .icon-box {
-    @apply absolute inset-0 bg-black bg-opacity-75 flex items-center justify-center gap-4
-           opacity-0 transition-opacity duration-300 hover:opacity-100;
-  }
-
-  .portfolio .box h6 {
-    @apply p-4 text-center font-semibold;
   }
 }
 
