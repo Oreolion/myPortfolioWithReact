@@ -1,113 +1,97 @@
-import { useState, useRef } from "react";
 import PropTypes from "prop-types";
 import { IoMdCloseCircle } from "react-icons/io";
 import { FaXTwitter } from "react-icons/fa6";
 import { BsInstagram } from "react-icons/bs";
-import { FiLinkedin, FiFacebook, FiGithub } from "react-icons/fi";
-import { CgMenuGridO } from "react-icons/cg";
+import { FiLinkedin, FiFacebook, FiGithub, FiMenu } from "react-icons/fi";
 import "animate.css";
 
-const Header = ({ menu, setMenu }) => {
-  const [header] = useState(true);
-  const [closeBtn, setCloseBtn] = useState(true);
-  const [isToggle, setIsToggle] = useState(true);
-  const myRef = useRef(null);
-
-  const handleMenuBtn = () => {
-    myRef.current.classList.toggle("active");
-    setIsToggle(!isToggle);
-    setCloseBtn(!closeBtn);
-    setMenu(!menu);
-  };
+const Header = ({ sidebarOpen, setSidebarOpen, mobileMenuOpen, setMobileMenuOpen }) => {
+  const toggleSidebar = () => setSidebarOpen(!sidebarOpen);
+  const toggleMobileMenu = () => setMobileMenuOpen(!mobileMenuOpen);
 
   return (
     <>
-      <div className="fixed top-4 right-4 z-50">
-        <button 
-          className="bg-primary hover:bg-gray-800 text-white p-3 rounded-lg shadow-lg transition-all duration-300 transform hover:scale-110"
-          onClick={handleMenuBtn}
-        >
-          {!menu && !isToggle ? (
-            <CgMenuGridO className="text-3xl" />
-          ) : (
-            <IoMdCloseCircle className="text-3xl" />
-          )}
-        </button>
-      </div>
+      {/* Mobile Menu Toggle */}
+      <button 
+        className="md:hidden fixed top-4 right-4 z-50 bg-primary hover:bg-gray-800 text-white p-3 rounded-lg shadow-lg transition-all duration-300"
+        onClick={toggleMobileMenu}
+      >
+        {mobileMenuOpen ? (
+          <IoMdCloseCircle className="text-2xl" />
+        ) : (
+          <FiMenu className="text-2xl" />
+        )}
+      </button>
 
-      {header && (
-        <header
-          className={`header ${isToggle ? "" : "active"} ${closeBtn ? "" : "collapsebtn"}`}
-          ref={myRef}
-        >
-          <div className="header-logo">
-            <h2 className="ra">RA</h2>
+      {/* Sidebar Toggle */}
+      <button 
+        className="hidden md:block fixed top-4 left-4 z-50 bg-primary hover:bg-gray-800 text-white p-3 rounded-lg shadow-lg transition-all duration-300"
+        onClick={toggleSidebar}
+      >
+        {sidebarOpen ? (
+          <IoMdCloseCircle className="text-2xl" />
+        ) : (
+          <FiMenu className="text-2xl" />
+        )}
+      </button>
+
+      {/* Sidebar */}
+      <aside className={`fixed top-0 left-0 h-screen bg-gray-800 text-white transition-all duration-300 
+        ${sidebarOpen ? 'w-64 translate-x-0' : 'w-0 -translate-x-full'} 
+        ${mobileMenuOpen ? 'translate-x-0' : ''} 
+        md:translate-x-0 z-40`}
+      >
+        <div className="flex flex-col h-full p-6">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold text-primary">RA</h2>
           </div>
 
-          <nav className="nav-menu">
-            <ul className="nav-list">
-              <li>
-                <a href="#home" onClick={handleMenuBtn}>Home</a>
-              </li>
-              <li>
-                <a href="#about" onClick={handleMenuBtn}>About</a>
-              </li>
-              <li>
-                <a href="#service" onClick={handleMenuBtn}>Service</a>
-              </li>
-              <li>
-                <a href="#experience" onClick={handleMenuBtn}>Experience</a>
-              </li>
-              <li>
-                <a href="#portfolio" onClick={handleMenuBtn}>Portfolio</a>
-              </li>
-              <li>
-                <a href="#contact" onClick={handleMenuBtn}>Contact</a>
-              </li>
+          <nav className="flex-1">
+            <ul className="space-y-4">
+              {['home', 'about', 'service', 'experience', 'portfolio', 'contact'].map((item) => (
+                <li key={item}>
+                  <a
+                    href={`#${item}`}
+                    className="block py-3 px-4 rounded-lg transition-all duration-300 hover:bg-primary hover:text-white transform hover:translate-x-2"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {item.charAt(0).toUpperCase() + item.slice(1)}
+                  </a>
+                </li>
+              ))}
             </ul>
           </nav>
 
-          <div className="header-icons">
-            <a
-              href="https://twitter.com/remyOreo_"
-              target="_blank"
-              rel="noreferrer"
-              className="hover:text-primary transition-colors duration-300"
-            >
-              <FaXTwitter className="logo" />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/remy-adedeji"
-              target="_blank"
-              rel="noreferrer"
-              className="hover:text-primary transition-colors duration-300"
-            >
-              <FiLinkedin className="logo" />
-            </a>
-            <a
-              href="https://github.com/Oreolion"
-              target="_blank"
-              rel="noreferrer"
-              className="hover:text-primary transition-colors duration-300"
-            >
-              <FiGithub className="logo" />
-            </a>
-            <a href="#" className="hover:text-primary transition-colors duration-300">
-              <FiFacebook className="logo" />
-            </a>
-            <a href="#" className="hover:text-primary transition-colors duration-300">
-              <BsInstagram className="logo" />
-            </a>
+          <div className="flex justify-center gap-4 mt-auto">
+            {[
+              { icon: FaXTwitter, href: "https://twitter.com/remyOreo_" },
+              { icon: FiLinkedin, href: "https://www.linkedin.com/in/remy-adedeji" },
+              { icon: FiGithub, href: "https://github.com/Oreolion" },
+              { icon: FiFacebook, href: "#" },
+              { icon: BsInstagram, href: "#" }
+            ].map((social, index) => (
+              <a
+                key={index}
+                href={social.href}
+                target="_blank"
+                rel="noreferrer"
+                className="text-2xl hover:text-primary transition-all duration-300 hover:scale-125"
+              >
+                <social.icon />
+              </a>
+            ))}
           </div>
-        </header>
-      )}
+        </div>
+      </aside>
     </>
   );
 };
 
 Header.propTypes = {
-  menu: PropTypes.bool,
-  setMenu: PropTypes.func,
+  sidebarOpen: PropTypes.bool.isRequired,
+  setSidebarOpen: PropTypes.func.isRequired,
+  mobileMenuOpen: PropTypes.bool.isRequired,
+  setMobileMenuOpen: PropTypes.func.isRequired,
 };
 
 export default Header;

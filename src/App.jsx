@@ -13,7 +13,8 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 function App() {
-  const [menu, setMenu] = useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [cursor1Style, setCursor1Style] = useState({
     top: 0,
     left: 0,
@@ -25,6 +26,7 @@ function App() {
     active: false,
   });
   const [hideButton, setHideButton] = useState(true);
+
   useEffect(() => {
     setTimeout(() => {
       AOS.init({
@@ -49,10 +51,7 @@ function App() {
     };
 
     window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   useEffect(() => {
@@ -62,13 +61,13 @@ function App() {
     };
 
     const handleMouseEnter = () => {
-      setCursor1Style({ ...cursor1Style, active: true });
-      setCursor2Style({ ...cursor2Style, active: true });
+      setCursor1Style((prev) => ({ ...prev, active: true }));
+      setCursor2Style((prev) => ({ ...prev, active: true }));
     };
 
     const handleMouseLeave = () => {
-      setCursor1Style({ ...cursor1Style, active: false });
-      setCursor2Style({ ...cursor2Style, active: false });
+      setCursor1Style((prev) => ({ ...prev, active: false }));
+      setCursor2Style((prev) => ({ ...prev, active: false }));
     };
 
     window.addEventListener("mousemove", handleMouseMove);
@@ -87,27 +86,34 @@ function App() {
   }, []);
 
   return (
-    <div className="container">
-      <Header menu={menu} setMenu={setMenu} />
-      <div className={`containercontent ${menu ? "" : "expanded"}`}>
-        {/* custom cursor */}
-
-        <div style={cursor1Style} className="cursor-1"></div>
-        <div style={cursor2Style} className="cursor-2"></div>
-
-        <Homepage />
-        <About />
-        <Services />
-        <Experiences />
-        <PortFolio />
-        <Contact />
-        <Footer />
-      </div>
-      <PiArrowFatLinesUpFill
-        style={{ display: hideButton ? "none" : "block" }}
-        className="up-arrow animate__animated animate__backInRight"
-        onClick={scrollToTop}
+    <div className="flex min-h-screen bg-background">
+      <Header 
+        sidebarOpen={sidebarOpen}
+        setSidebarOpen={setSidebarOpen}
+        mobileMenuOpen={mobileMenuOpen}
+        setMobileMenuOpen={setMobileMenuOpen}
       />
+      
+      <main className={`flex-1 transition-all duration-300 ${sidebarOpen ? 'md:ml-64' : 'ml-0'}`}>
+        <div className="relative">
+          <div style={cursor1Style} className="cursor-1" />
+          <div style={cursor2Style} className="cursor-2" />
+
+          <Homepage />
+          <About />
+          <Services />
+          <Experiences />
+          <PortFolio />
+          <Contact />
+          <Footer />
+        </div>
+
+        <PiArrowFatLinesUpFill
+          style={{ display: hideButton ? "none" : "block" }}
+          className="up-arrow animate__animated animate__backInRight"
+          onClick={scrollToTop}
+        />
+      </main>
     </div>
   );
 }

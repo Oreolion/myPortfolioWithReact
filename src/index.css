@@ -19,10 +19,6 @@
 }
 
 @layer components {
-  .container {
-    @apply max-w-7xl mx-auto;
-  }
-
   .btn {
     @apply inline-flex items-center bg-primary text-white font-semibold py-3 px-6 rounded-lg 
            transition-all duration-300 hover:bg-gray-800 hover:tracking-wider 
@@ -30,76 +26,80 @@
            focus:ring-primary focus:ring-opacity-50;
   }
 
-  .header {
-    @apply fixed top-0 left-0 h-screen bg-gray-800 text-white transition-all duration-300
-           w-64 flex flex-col items-center py-8 px-6 z-40 shadow-2xl transform -translate-x-full md:translate-x-0;
+  /* Cursor styles */
+  .cursor-1, .cursor-2 {
+    @apply fixed pointer-events-none z-50 rounded-full mix-blend-difference;
   }
 
-  .header.active {
-    @apply translate-x-0;
+  .cursor-1 {
+    @apply w-8 h-8 border-2 border-white transition-all duration-200 ease-out;
   }
 
-  .header-logo {
-    @apply mb-8;
+  .cursor-2 {
+    @apply w-2 h-2 bg-white transition-all duration-100 ease-out;
   }
 
-  .header-logo h2 {
-    @apply text-3xl font-bold text-primary;
+  /* Up arrow button */
+  .up-arrow {
+    @apply fixed bottom-8 right-8 text-4xl text-primary cursor-pointer 
+           transition-all duration-300 hover:scale-125 z-50;
   }
 
-  .nav-menu {
-    @apply w-full mt-8;
+  /* Section headings */
+  section h1 {
+    @apply text-4xl md:text-5xl font-bold text-center mb-16;
   }
 
-  .nav-list {
-    @apply space-y-4;
+  section h1 span {
+    @apply text-primary;
   }
 
-  .nav-list a {
-    @apply block py-3 px-4 rounded-lg transition-all duration-300
-           hover:bg-primary hover:text-white transform hover:translate-x-2;
+  /* Skills section */
+  .logos__container {
+    @apply grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 
+           place-items-center bg-white p-8 rounded-xl shadow-lg;
   }
 
-  .header-icons {
-    @apply flex justify-center gap-4 mt-auto mb-8;
+  .logos__container svg,
+  .logos__container img {
+    @apply transition-transform duration-300 hover:scale-125;
   }
 
-  .logo {
-    @apply text-2xl hover:scale-125 transition-transform duration-300;
+  /* Box container styles */
+  .box-container {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-12;
   }
 
-  .containercontent {
-    @apply ml-0 md:ml-64 transition-all duration-300;
-  }
-
-  .homepage {
-    @apply flex flex-col md:flex-row items-center justify-between gap-12 
-           min-h-screen pt-20 md:pt-0 px-4 md:px-8 lg:px-16;
-  }
-
-  .homepage .content {
-    @apply w-full md:w-1/2 space-y-6;
-  }
-
-  .homepage .image-container {
-    @apply w-full md:w-1/2 flex justify-center items-center;
-  }
-
-  .experiences .experiencebox {
-    @apply bg-white rounded-xl p-6 shadow-lg transition-all duration-300
-           hover:transform hover:scale-105 hover:shadow-xl;
-  }
-
-  .contact-me .box {
-    @apply bg-white rounded-xl p-6 shadow-lg text-center
+  .box-container .box {
+    @apply bg-white p-8 rounded-xl shadow-lg text-center
            transform hover:scale-105 transition-all duration-300;
   }
 
-  .contact-me form input,
-  .contact-me form textarea {
-    @apply w-full border-2 border-gray-300 rounded-lg p-3
-           focus:border-primary focus:ring-2 focus:ring-primary focus:outline-none
-           transition-colors duration-300;
+  .box-container .box h2 {
+    @apply text-3xl font-bold text-primary mb-4;
+  }
+
+  /* Portfolio styles */
+  .portfolio .inner-portfolio {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8;
+  }
+
+  .portfolio .box {
+    @apply relative bg-white rounded-xl overflow-hidden shadow-lg
+           transform hover:scale-105 transition-all duration-300;
+  }
+
+  .portfolio .box img {
+    @apply w-full h-64 object-cover;
+  }
+
+  .portfolio .icon-box {
+    @apply absolute inset-0 bg-black bg-opacity-75 flex items-center justify-center gap-4
+           opacity-0 transition-opacity duration-300 hover:opacity-100;
+  }
+
+  .portfolio .box h6 {
+    @apply p-4 text-center font-semibold;
   }
 }
 
